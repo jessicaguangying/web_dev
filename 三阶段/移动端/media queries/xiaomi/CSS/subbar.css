@@ -1,0 +1,5 @@
+.subbar{position:fixed; bottom:100px; left:50%; margin-left: 605px;}
+.subbar li{width:30px; height:30px; border: 1px black solid;text-align: center;
+line-height: 30px;margin-top: 10px;}
+.subbar li i{font-size: 20px;color: red;}
+.subbar li p{display:none;}

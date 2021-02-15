@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./CSS/common.css">
+		<link rel="stylesheet" href="../icon/download/iconfont.css">
+		<title></title>
+		<style>
+			#projecttitle .projecttitle-text{margin:21px 0 0 27px;color:black;}
+			#projecttitle .projecttitle-text h2{font-size:24px;line-height:25px;} 
+			#projecttitle .projecttitle-text p{font-size:14px; line-height:30px;margin-top:10px;margin:10px 0 13px;}
+			#projecttitle .projecttitle-text i{font-size:22px; color:#cccccc; margin-left:30px;}
+			#projecttitle .projecttitle-text span{color:#999999}
+			#projecttitle .projecttitle-img{width:200px; height:149px; margin:20px 20px 0 0;}
+			
+			#projectlist{}
+			#projectlist .projectlist-btn{height:54px;background:burlywood; border-top:1px #0077AA solid; border-bottom:1px #0086B3 solid;}
+			#projectlist .projectlist-btn ul{margin:14px 0 0 20px;}
+			#projectlist .projectlist-btn ul li{float:left; width:108px;height:39px; border:1px green solid; border-bottom:none; background:white;
+			color:#666666;text-align: center; line-height:39px;margin-right:12px;border-radius: 5px 5px 0 0;cursor:pointer;}
+			#projectlist .projectlist-btn ul li.active{background-color: #0000FF;color:white;}
+			#projectlist .projectlist-btn ul li.active:after{content:""; display:block; position:absolute; width:11px;
+			height:6px; background:url()no-repeat; bottom:-6px; left:50%; margin-left:-6px;}
+			
+			#projectlist .project-cons{margin:20px;}
+			#projectlist .project-cons>div{display:none;}
+			#projectlist .project-cons>div.show{display:block;}
+			#projectlist .zl-upload1 , #projectlist .zl-upload2{width:110px; height:32px; line-height:32px; text-align:center;
+			font-size: 14px;color:white;border-radius:5px; cursor:pointer;}
+			#projectlist .zl-upload1 input , #projectlist .zl-upload2 input {display:none;}
+			#projectlist .zl-upload1 label , #projectlist .zl-upload2 label {cursor:pointer;}
+			#projectlist .zl-upload1{background-color: green;}
+			#projectlist .zl-upload2{background-color: blueviolet;margin-left:20px;}
+			#projectlist .search{ width:210px; height:30px; line-height30px; border:1px #0086B3 solid; border-radius:5px; overflow:hidden;}
+			#projectlist .search input{border:none; width:170px; font-size:16px; color:gray;text-indent:9px;top:3px;outline:none;}
+			#projectlist .search button{width:32px; height:32px; border:none;border-left:1px solid #0086B3;
+			background-image: linear-gradient(white, gray);cursor:pointer;}
+			#projectlist .search i{font-size:18px; font-weight: blod; color:red}
+			
+			#projectlist .zl-table{clear:both; width:100%;border:1px #0086B3 solid;font-size:12px;border-collapse: collapse;
+			position:relative; top:20px;}
+			#projectlist .zl-table tr{height:32px;border-bottom:1px #0086B3 solid;}
+			#projectlist .zl-table tr:hover{background-color: #0086B3;color:white;}
+			#projectlist .zl-table th{border-right:1px #0086B3 solid;color:#666666; font-weight:normal; text-align:left;
+			text-indent:12px;background-color: #0077AA;color:white;}
+			#projectlist .zl-table th:first-child , #projectlist .zl-table td:first-child{text-align:center;text-indent: 0;}
+			#projectlist .zl-table td{text-indent:12px;}
+			#projectlist .zl-table .iconword{margin-right:12px; color:skyblue}
+			#projectlist .zl-table .iconxiazai{ color:skyblue}
+			#projectlist .zl-table .iconshanchu{ color:red}
+			
+			#projectlist .zl-footer{height:70px; border:1px #0086B3 solid; border-top:none;margin-top:20px;overflow:hidden;
+			}
+			#projectlist .zl-footer .zl-remove , #projectlist .zl-footer .zl-download{width:78px;height:24px; border:1px #0086B3 solid;
+			border-radius: 3px;background-image: linear-gradient(white #e7f4fa);color:blue;margin-top: 18px;font-size:12px;cursor:pointer;}
+			#projectlist .zl-footer .zl-remove{margin-right: 15px;margin-left: 22px;}
+			#projectlist .zl-footer .zl-download{}
+			#projectlist .zl-footer .zl-page{font-size: 12px;line-height:24px;margin:22px 18px 0 0;font-size: 0;}
+			#projectlist .zl-footer .zl-page a{border:1px #0086B3 solid;padding:6px 9px;font-size: 12px;margin-left: 10px;}
+			#projectlist .zl-footer .zl-page a.active{border: 1px sandybrown solid; color:white; background:blue;}
+			
+		</style>
+	</head> 
+	<body>
+		<header id="header">
+			<hgroup class="header-logo">
+				<h1 class="l">
+					<img src="" alt="logo">
+				</h1>
+				<h2 class="l">大唐移动公司</h2>
+			</hgroup>
+			<ul class="header-nav r">
+				<li>
+					<i class="iconfont iconwode"></i>欢迎您，武建 管理员
+				</li>
+				<li>
+					<i class="iconfont iconyuechi"></i><a href="#">修改密码</a>
+				</li>
+				<li>
+					<i class="iconfont iconshouye"></i></i><a href="#">公司官网</a>
+				</li>
+				<li>
+					<i class="iconfont iconplus-share"></i></i><a href="#">退出</a>
+				</li>
+			</ul>
+		</header>
+		<aside id="menu" class="l">
+			<ul>
+				<li class="active">
+					<a href="#">
+						<i class="iconfont iconfoukongguanli"></i>
+						<p>项目管理</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="inconfont iconyonghuguanli"></i>
+						<p>用户管理</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont iconshezhi"></i>
+						<p>系统设置</p>
+					</a>
+				</li>
+			</ul>
+		</aside>
+		<main id="main">
+			<section class="main-container">
+				<section id="projecttitle" class="clear">
+					<div class="projecttitle-text l">
+						<h2>03二期项目<i class="iconfont iconjianji"></i></h2>
+						<p>
+							项目编号：<span>CN00001</span>
+							<br>
+							项目类型：<span>在建工程</span>
+							<br>
+							项目编号：<span>梅海园</span>
+							<br>
+							项目编号：<span>15869168967</span>
+						</p>
+					</div>
+					<div class="projecttitle-img r">
+						<img src="" alt="项目效果图">
+					</div>
+				</section>
+				<section id="projectlist">
+					<div class="projectlist-btn">
+						<ul>
+							<li>视频监控</li>
+							<li>考勤管理</li>
+							<li>安全检查</li>
+							<li class="active">资料管理</li>
+						</ul>
+					</div>
+					<div class="project-cons">
+						<div>11111111111111111111</div>
+						<div>22222222222222222</div>
+						<div>33333333333333</div>
+						<div class="show">
+							<div class="zl-upload1 l">
+								<label for="">
+									<input type="file">
+									<i class="iconfont iconshangchuang"></i>&nbsp;&nbsp;单个上传
+								</label>
+							</div>
+							<div class="zl-upload2 l">								
+								<label for="">	
+									<input type="file" multiple>
+									<i class="iconfont iconshangchuang1"></i>&nbsp;&nbsp;批量上传
+								</label>
+							</div>
+							<div class="search r">
+								<input type="text" placeholder="请输入关键字"><button><i class="iconfont iconsousuo"></i></button>
+							</div>
+							<table class="zl-table">
+								<thead>
+									<th width="49"><input type="checkbox"></th>
+									<th>文件名称</th>
+									<th width="147">文件大小</th>
+									<th width="148">上传者</th>
+									<th width="128">上传时间</th>
+									<th width="81">操作</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>									<tr>
+										<td><input type="checkbox"></td>
+										<td><i class="iconfont iconword"></i>安全专项方案</td>
+										<td>21.3KB</td>
+										<td>张文耀</td>
+										<td>2016-03-14</td>
+										<td><i class="iconfont iconxiazai"></i><i class="iconfont iconshanchu"></i></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="zl-footer">
+								<button class="zl-remove">批量删除</button>
+								<button class="zl-download">批量下载</button>
+								<div class="zl-page r">
+									<a href="#">共12条</a>
+									<a href="#">首页</a>
+									<a href="#">上一页</a>
+									<a href="#" class="active">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">下一页</a>
+									<a href="#">尾页</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>	
+		</main>
+		<footer id="footer">
+			copyright 2009-2016
+		</footer>
+	</body>
+</html>

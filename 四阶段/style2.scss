@@ -1,0 +1,28 @@
+.box{width:200px;}
+
+ul{
+	list-style: none;
+	li{
+		float:left;
+		div{ margin:10px; }
+		p{ margin:20px; }
+	}
+}
+
+
+$background : (
+      a:url(a.png),
+	  b:url(b.png)
+);
+.box9{
+	background : map-value($background)
+}
+
+$count : 5;
+
+.box11{
+	@if ($count > 4){
+	width : 100px + $count;
+	}
+}
+

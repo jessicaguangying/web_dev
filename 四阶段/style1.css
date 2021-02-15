@@ -1,0 +1,49 @@
+.box {
+  width: 100px;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  float: left;
+}
+ul li div {
+  margin: 10px;
+}
+ul li p {
+  margin: 20px;
+}
+ul:hover {
+  color: red;
+}
+.box4 {
+  width: 300px;
+  height: 120px;
+  margin: 110em;
+  font: 20px / 1.5;
+  padding:  20px / 1.5 ;
+}
+.box5 {
+  width: 4px;
+  height: 20%;
+}
+.show {
+  display: 'block';
+}
+.head {
+  display: none;
+}
+.box6 {
+  width: 100px;
+  display: 'block';
+  display: none;
+}
+.line,
+.box7,
+.box8 {
+  display: inline;
+}
+.box9 {
+  background: url(a.png), url(b.png);
+  transform: scale(2) rotate(30deg);
+}

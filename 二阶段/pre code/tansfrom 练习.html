@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin:0; padding:0}
+			ul{list-style: none;}
+			div{width:475px;border:1px solid red; margin:10px auto;overflow: hidden; }
+			ul li{width:100px;height:30px; line-height:30px; float:left; margin:10px; border:1px green solid;text-align:center;
+				background-color: #FF0000;color:white;transform:skew(-30deg);cursor:pointer;
+			}
+			ul li:hover{background-color: blue;}
+			ul li span{transform:skew(30deg); display:block;}
+			ul li:first-child{margin-left: -10px;padding-left: 10px;}
+			ul li:last-child{margin-right: -35px;padding-right: 35px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><span class="active">首页</span></li>
+				<li><span>关于我们</span></li>
+				<li><span>联系方式</span></li>
+				<li><span>招聘信息</span></li>
+			</ul>
+		</div>
+	</body>
+</html>

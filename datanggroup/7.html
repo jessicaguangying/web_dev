@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>练习</title>
+		<style>
+			*{
+				margin:0; padding:0
+			}
+			ul{
+				list-style:none;
+			}
+			img{
+				display:block;
+			}
+			a{text-decoration:none; color:black;}
+			h1,h2,h3,h4,h5,h6{font-size:16px; font-weight: normal;}
+			#main{width:238px; margin:20px auto;border:1px #7FFFD4 solid; border-top:3px orange solid;}
+			#main h2{height:30px; line-height: 30px;border-bottom:1px #7FFFD4 solid;font-size:16px;padding-left: 11px;}
+			#main h2 a{color:black; }
+			#main h2 a:hover{background-color: orange;}
+			#main div img{margin:8px auto 3px auto;width:200px; height: 200px;}
+			#main ul{ font-size:12px; line-height: 24px; padding-bottom: 8px;}
+			#main ul li{padding-left: 18px;position:relative;}
+			#main ul li:before{content:''; display:block; width:3px; height:3px; background:red; position:absolute; left:8px; top:50%; margin-top:-2px;}
+			#main ul li .first-line{border-bottom:1px #7FFFD4 solid; padding-bottom:3px; marging-bottom:8px;}
+			#main ul a{}
+			#main ul a:hover{color:orange; text-decoration:underline;}
+		</style>
+		
+	</head>
+	<body>
+		<div id="main">
+			<h2>
+				<a href="#">搜索趣图</a>
+			</h2>
+			<div>
+				<a href="#">
+					<img src="./imgs/content_pc_01.jpg" alt="">
+				</a>
+			</div>
+			<ul>
+				<li class:"first-line">
+					<a href="#">测试文字策士文字</a>
+				</li>
+				<li><a href="#">测试文字策士文字</a></li>
+				<li><a href="#">测试文字策士文字</a></li>
+			</ul>
+			
+		</div>
+	</body>
+</html>

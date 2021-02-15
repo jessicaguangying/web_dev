@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// //确定输出的行
+			// for(var i = 1; i <= 5; i++){
+			// 	//圆圈个数
+			// 	for(var j = 1; j <=i; j++){
+			// 		document.write("@")
+			// 	}
+			// 	document.write("<br/>");
+			// }
+			
+			// //i 是行，j 是列
+			// for(var i = 1; i <= 9; i++){
+			// 	for(var j = 1; j <= i; j++){
+			// 		document.write(j + "X" + i + "=" + (i * j) + "&nbsp;&nbsp;");
+			// 	}
+			// 	document.write("<br/>");
+			// }
+			
+			// for(var i = 1; i <= 5; i++){
+			// 	//空格数
+			// 	for(var k = 1; k <= 5 - i; k++){
+			// 		document.write("&ensp;&ensp;")
+			// 	}
+			// 	//圆圈个数
+			// 	for(var j = 1; j <=i; j++){
+			// 		document.write("@")
+			// 	}
+			// 	document.write("<br/>");
+			// }		
+					
+			
+			// var water = 15;
+			// var count = 0;
+			// while(water < 50){
+			// 	count++;
+			// 	water += 5;
+			// }
+			// alert("一共需挑" + count + "次水")
+			
+			//是质数还是合数
+			// 1和2 肯定是质数，所以可以从3开始
+			
+			// var num = 6;
+			// var isYes = false; //质数
+			// for(var i = 2; i <= num; i++){
+			// 	if(num % i == 0){
+			// 		isYes = true;
+			// 		break;
+			// 	}
+			// }
+			// if(isYes){
+			// 	alert(num + ",这是一个合数");
+			// }else{
+			// 	alert(num + ",这是一个质数");
+			// }
+			
+			 
+			 var num = 1; //每一格麦子数
+			 var sum = 0;
+			 for(var i = 0; i < 64; i++){
+				 sum += num;
+				 num *= 2;
+			 }
+			 alert(sum);
+		</script>
+	</body>
+</html>

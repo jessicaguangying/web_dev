@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大唐电信</title>
+		<link rel="stylesheet" href="./CSS/common.css">
+		<style>
+			#banner{position:relative; border: 1px #FF0000 solid;}
+			#banner .banner_list{width:100%; height:469px;position:relative;}
+			#banner .banner_list li{width:100%; height:100%;background: center o no-repeat;position:absolute; left:0; top:0; opacity:0; z-index:1; }
+			#banner .banner_list li.active{opacity:1; z-index:10;}
+			#banner .banner_list a{ display:block; width:100%;height:100%;}
+			#banner .banner_butten{width:100%; position:absolute; bottom:19px;z-index:20; text-align:center;}	
+			#banner .banner_butten li{display: inline-block; width:12px; height:12px;border-radius:50%; box-sizing:border-box;margin:0.6px;cursor:pointer;border:1px solid red;}
+			#banner .banner_butten li .active{ background-color: #FF0000; z-index:21;}
+		    #service{overflow: hidden; height:460px;}
+			#service .service_list{text-align: center;margin-top:34px;}
+			#service .service_list li{float:left;width:300px; margin-left:30px;padding:0 10px;}
+			#service .service_list div{width:250px; height:200px; margin:0 auto;margin-bottom:10px;}
+			#service .service_list li:nth-of-type(1) div{background-image: url(imgs/1.jpg);}
+			#service .service_list li:nth-of-type(2) div{background-image: url(imgs/2.jpg);}
+			#service .service_list li:nth-of-type(3) div{background-image: url(imgs/3.jpg);}
+			#service .service_list li:nth-of-type(4) div{background-image: url(imgs/4.jpg);}
+			#service .service_list h3{font-size:18px; color: #000000;line-height:36px;}
+			#service .service_list p{font-size:13px;line-height:22px; color: #696969;}
+			/* #case{background-color: darkgray;height:400px; border:1px red solid;position:relative;}
+			#case .case_list li{float:left; width:300px; border:1px red solid; margin-left:100px;overflow:hidden;margin:20px 80px;} 
+			#case .case_btn{position:absolute; left:700px; top:330px;} */
+			#case{background-color: darkgray;position:relative;height:400px;}
+			#case .container{min-height:200px;;overflow:hidden;}
+			#case .area-title{margin-top:55px;}
+			#case .area-title h2{color:black;font-weight:bold;}
+			#case .case_list{margin-top:20px;}
+			#case .case_list li{float:left; width:300px;margin-left:100px;overflow:hidden;margin:30px 80px;} 
+			#case .case_btn{width:100%; height:30px;line-height:30px;}
+			#case .case_btn img{position:absolute; left:700px; top:350px;}
+			#case .case_btn a{display:block; width:100%; height:100%;}
+			#news{min-height: 450px;overflow:hidden;}
+			#news .area-title{ margin-top:65px;}
+			dl{ margin-top:48px;}
+			#news dt{width:334px;height:350px;}
+			#news dd{width:946px; margin:0 10px;}
+			#news .news-list{width:100%;}
+			#news .news-list li{width:50%; float:left;margin-bottom:48px;}
+			#news .news_date{width:70px; height:70px; border-right:1px black solid;text-align:center;margin-top:30px;}
+			#news .news_date i{color:green; font-size:39px;font-weight: bold; display:block;}
+			#news .news_date span{ color:gray; font-size:20px; line-height:36px;}
+			#news .news_text{width:300px;height: 60px; margin-left:30px;margin-top: 30px;}
+			#news .news_text h3{font-size:14px;}
+			#news .news_text h3 a{color:black;}
+			#news .news_text p{color:gray; font-size:12px; line-height:21px;}
+		</style>
+	</head>
+
+	<body>
+		<div id="head" class="container">
+			<div class="head_logo l">
+				<a href="#"><img src="./imgs/logo.png" alt="大唐电信"; title="大唐电信";>
+				</a>
+			</div>
+			<ul class="head_menu r">
+				<li>
+					<a href="#">HOME</a>
+				</li>
+				<li>
+					<a href="#">ABOUT</a>
+				</li>
+				<li>
+					<a href="#">NEWS</a>
+				</li>
+				<li>
+					<a href="#">HOME</a>
+				</li>
+				<li>
+					<a href="#">ABOUT</a>
+				</li>
+				<li>
+					<a href="#">NEWE</a>
+				</li>
+
+			</ul>
+			
+		</div>
+		<div id="banner" class="container-fluid">
+			<ul class="banner_list">
+				<li class="active"; style="background-image: url(imgs/banner-html5.jpg);">
+					<a href="#"></a>
+				</li>
+				<li style="background-image: url(imgs/banner-html5.jpg);"></li>
+				<li style="background-image: url(imgs/banner-html5.jpg);"></li>
+				<li style="background-image: url(imgs/banner-html5.jpg);"></li>
+			</ul>
+			<ol class="banner_butten">
+				<li class="active" style="background-color: red;"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<div id="service" class="container">
+			<div class="area-title">
+				<h2>服务项目</h2>
+				<p>ABCDEFGHIGK</p>
+			</div>
+			<ul class="service_list">
+				<li>
+					<div></div>
+					<h3>WEBSITE</h3>
+					<p>企业品牌王手机<br>华为手机
+					</p>
+				</li>
+				<li>
+					<div></div>
+					<h3>WEBSITE</h3>
+					<p>企业品牌王手机<br>三星手机
+					</p>
+				</li>
+				<li>
+					<div></div>
+					<h3>WEBSITE</h3>
+					<p>企业品牌王手机<br>苹果手机
+					</p>
+				</li>
+				<li>
+					<div></div>
+					<h3>WEBSITE</h3>
+					<p>企业品牌王手机<br>橙子手机
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div id="case" class="container-fluid">
+			<div class="area-title">
+				<h2>客户案例</h2>
+				<p>YOU MADE ME BETTER,YOU ARE A BEST MAN.</p>
+			</div>
+			<ul class="case_list container clear">
+				<li><a href="#"><img src="./imgs/4.jpg" alt="man"></a></li>
+				<li><a href="#"><img src="./imgs/4.jpg" alt="man"></a></li>
+				<li><a href="#"><img src="./imgs/4.jpg" alt="man"></a></li>
+			</ul>
+			<div class="case_btn">
+				<a href="#"><img src="./imgs/banner_btn.gif" alt="view more"></a>
+			</div>
+		</div>
+		<div id="news" class="container">
+			<div class="area-title">
+				<h2>最新资讯</h2>
+				<p>THIS IS THE LAST NEWS</p>
+			</div>
+			<dl>
+				<dt class="l">
+					<img src="./imgs/content_pc_01.jpg" alt="news">
+				</dt>
+				<dd class="l">
+					<ul class="news-list">
+						<li>
+							<div class="news_date l">
+								<i>09</i>
+								<span>Jan</span>
+							</div>
+							<div class="news_text l">
+								<h3><a href="#">现收到专线ISP供应商通知，我司现用于五道口办公区到西二旗办公区专线信号有衰减，需要维修维护.</a></h3>
+							</div>
+						</li>
+						<li>
+							<div class="news_date l">
+								<i>10</i>
+								<span>Jan</span>
+							</div>
+							<div class="news_text l">
+								<h3><a href="#">现收到专线ISP供应商通知，我司现用于五道口办公区到西二旗办公区专线信号有衰减，需要维修维护.</a></h3>
+							</div>
+						</li>
+						<li>
+							<div class="news_date l">
+								<i>12</i>
+								<span>Jan</span>
+							</div>
+							<div class="news_text l">
+								<h3><a href="#">现收到专线ISP供应商通知，我司现用于五道口办公区到西二旗办公区专线信号有衰减，需要维修维护.</a></h3>
+							</div>
+						</li>
+						<li>
+							<div class="news_date l">
+								<i>09</i>
+								<span>Jan</span>
+							</div>
+							<div class="news_text l">
+								<h3><a href="#">现收到专线ISP供应商通知，我司现用于五道口办公区到西二旗办公区专线信号有衰减，需要维修维护.</a></h3>
+							</div>
+						</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>	
+		<div id="foot" class="container-fluid">
+			<div class="container">
+				<p class="l">http:www.Yoyogroup.com</p>
+				<div class="r">
+					<a href="">首页</a>|<a href="">我们</a>|<a href="">首页</a>|<a href="">我们</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

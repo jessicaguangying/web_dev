@@ -1,0 +1,37 @@
+{
+  "id": "2355922",
+  "name": "number1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19649318",
+      "name": "exe",
+      "font_class": "exe",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "19649319",
+      "name": "GIF",
+      "font_class": "GIF",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "19649321",
+      "name": "excel",
+      "font_class": "excel",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "19649322",
+      "name": "MP3",
+      "font_class": "MP3",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box1, .box2, .box3, .box4{width:100px; height:100px; background-color: red; margin:5px;}
+			.box1{animation:2s move 2s;}
+			.box2{animation:2s move 2s;  animation-fill-mode: backwards;}
+			.box3{animation:2s move 2s; animation-fill-mode: forwards;}
+			.box4{animation:2s move 2s; animation-fill-mode: both;}
+			
+			@keyframes move{
+				0%{transform:translate(0,0);background-color: blue;}
+				100%{transform:translate(300px,0);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+	</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			ul,ol{list-style:none;}
+			#header:after{content:''; display:block; clear:both;}
+			#header ul{width:600px;;border:1px red solid;float:right;}
+			#header li{width:80px; height:100px;background:green;border:1px orange solid;margin-left:50px;float:left;}
+			#banner{position:relative;}
+			#banner:after{content:''; display:block; clear:both;}
+			#banner .banner-list{width:100%; height:469px;}
+			#banner .banner-list li{width:100%; height:100%;background: center 0 no-repeat; position:absolute; left:0;
+			top:0;opacity:0; z-index: 1;}
+			#banner .banner-list li.active{opacity:1;z-index:5;}
+			#banner .banner-btn{position:absolute;bottom:19px; left:50%; z-index:20;font-size:0; text-align:center;} 
+			#banner .banner-btn li{display:inline-block;width:12px; height:12px; border:2px red solid; border-radius:50%; box-sizing:border-box;cursor:poiniter;
+			margin-left:3px;}
+			#banner .banner-btn li.active{background:red;}
+			
+			.area-title{margin-top:60px; text-align:center;}
+			.area-title h2{height:20px; line-height:20px; font-size:20px; color:#363636; backgroun:url(../imgs/1.1.png) no-repeat center;}
+			.area-title p{color:#9f9f9f; font-size:14px; line-height:34px;}
+			
+			#service{overflow:hidden; min-height:407px;}
+			#service .service-list{text-align:center;margin-top:34px}
+			#service .service-list li{float:left; width:250px; margin:0 10px;}
+			#service .service-list div{width:102px; height:102px; margin:0 auto;}
+			#service .service-list li:nth-of-type(1) div{background: url(imgs/0161405915674fa801216a3eeda4d1_03.png) no-repeat;}
+			#service .service-list li:nth-of-type(3) div{background: url(imgs/0161405915674fa801216a3eeda4d1_02.png) no-repeat;}			
+			#service .service-list h2{font-size:18px; color:#434343; line-heigh:36px; margin-top:20px;}
+			#service .service-list p{font-size:14px; color:#6d6d6d; line-height: 22px;}
+		
+			#case{background-color: #f8f8f8;}
+			#case .container{min-height:460px; overflow:hidden;}
+			#case .case-list{margin-top:28px;}
+			#case .case-list:after {content:''; display:block; clear:both;}
+			#case .case-list li{width:340px;margin:0 10px;float:left;}
+			#case .case-btn{width:200px; height:30px;background-color: red; margin:0 auto; border-radius:10px;text-align: center;}
+			#case .case-btn a{display:block;width:100%; height:100%; color:white;}
+		</style>
+	</head>
+	<body>
+		<div id="header" class="container">
+			<a href=""><img src="./imgs/0161405915674fa801216a3eeda4d1_03.png" alt=""></a>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<div id="banner" class="container-fluid">
+			<ul class="banner-list">
+				<li class="active" style="background-image:url(./imgs/banner-html5.jpg);">
+					<a href="#"></a>
+				</li>
+				<li style="background-image:url(./imgs/banner-html5.jpg);">
+					<a href="#"></a>
+				</li>
+				<li style="background-image:url(./imgs/banner-html5.jpg);">
+					<a href="#"></a>
+				</li>
+			</ul>
+			<ul class="banner-btn">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div id="service" class="container">
+			<div class="area-title">
+				<h2>服务项目</h2>
+				<p>OUR SERVICE</p>
+			</div>
+			<ul class="service-list">
+				<li>
+					<div></div>
+					<h2>1.web design</h2>
+					<p>外衣品牌这是哪里<br>广告设计</p>
+				</li>
+				<li>
+					<div></div>
+					<h2>1.web design</h2>
+					<p>外衣品牌这是哪里<br>广告设计</p>
+				</li>
+				<li>
+					<div></div>
+					<h2>1.web design</h2>
+					<p>外衣品牌这是哪里<br>广告设计</p>
+				</li>
+				<li>
+					<div></div>
+					<h2>1.web design</h2>
+					<p>外衣品牌这是哪里<br>广告设计</p>
+				</li>
+			</ul>		
+		</div>
+		<div id="case" class="container-fluid">
+			<div class="container">
+				<div class="area-title">
+					<h2>客户案例</h2>
+					<p>WITH THE BEST PROFESSIONAL TECHNOLOG</p>
+				</div>
+				<ul class="case-list">
+					<li>
+						<a href="#"><img src="./imgs/1-1.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="./imgs/1-2.png" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="./imgs/1-3.png" alt=""></a>
+					</li>
+				</ul>
+				<div class="case-btn">
+					<a href="">VIEW MORE</a>
+				</div>
+			</div>
+		</div>
+		<div id="news" class="contianer">
+			<div class="area-title">
+				<h2></h2>
+				<p></p>
+			</div>
+			<dl>
+				<dt> <img src="" alt=""></dt>
+				<dd>
+					<ul class="news-list">
+						<li>
+							<div class="date">
+								<i>09</i>
+								<span>Jan</span>
+							</div>
+							<div class="text">
+								<h2></h2>
+								<p></p>								
+							</div>
+						</li>
+						<li>
+							<div class="date">
+								<i>09</i>
+								<p>Jan</p>
+							</div>
+							<div class="text">
+								<h2></h2>
+								<p></p>								
+							</div>
+						</li>
+						<li>
+							<div class="date">
+								<i>09</i>
+								<span>Jan</span>
+							</div>
+							<div class="text">
+								<h2></h2>
+								<p></p>								
+							</div>
+						</li>																													
+					</ul>											
+				</dd>
+			</dl>
+		</div>
+	</body>
+</html>

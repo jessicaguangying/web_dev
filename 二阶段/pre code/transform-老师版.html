@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin:0; padding:0;}
+			img{display:block;}
+			ul{list-style: none;}
+			
+			.list{width:250px; margin:30px auto;}
+			.list li{height:97px; border:1px gray dashed;overflow:hidden;cursor:pointer;}
+			.list li:last-child{border-bottom:none;}
+			.list .list_photo{float:left; width:112px;height:77px;margin:10px 9px 0 5px; position:relative;}
+			.list .list_photo .list_photo_box{width:80px; height:57px; border:1px red solid; position:absolute;left:9px; top:9px;
+					transform: translate(-30px,-200px); transition-duration:1s; transform-origin:0 0;}
+			.list .list_photo .list_photo_text{width:100px;position:absolute; color:red; text-align:center;
+					bottom:10px;font-size:12px; transform: translate(0,100px);transition-duration:1s;}
+			.list .list_photo img{width:90px;}
+			.list .list_text{float:left; width:114px;font-size:12px;line-height:20px;margin-top:10px}
+		
+			.list li:hover .list_photo_box{transform:translate(0,0) rotate(0);}
+			.list li:hover .list_photo_text{transform:translate(0,0) }
+		</style>
+	</head>
+	<body>
+			<ul class="list">
+				<li>
+					<div class="list_photo">
+						<img src="./imgs/step1.png" alt="">
+						<div class="list_photo_box"></div>
+						<div class="list_photo_text">陌陌上市</div>
+					</div>
+					<div class="list_text">
+						<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_photo">
+						<img src="./imgs/step2.png" alt="">
+						<div class="list_photo_box"></div>
+						<div class="list_photo_text">陌陌上市</div>
+					</div>
+					<div class="list_text">
+						<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+					</div>
+				</li>
+				<li>
+					<div class="list_photo">
+						<img src="./imgs/step3.png" alt="">
+						<div class="list_photo_box"></div>
+						<div class="list_photo_text">陌陌上市</div>
+					</div>
+					<div class="list_text">
+						<p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+					</div>
+				</li>				
+			</ul>
+	</body>
+</html>

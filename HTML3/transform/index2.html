@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0; padding:0;
+		}
+		.box{
+			float:left; position:relative; width:300px; height:300px;
+			margin:100px 200px; overflow:hidden;
+		}
+		.box img{
+			width:300px; height:300px;
+		}
+		.box *{
+			transition:1s; position:absolute; left:0px; top:0px;
+		}
+		.box h2{
+			color:white; width:200px;
+			transform: translateX(50px) translateY(240px);
+		}
+		.box p{
+			color:black;
+		}
+		.box p:nth-of-type(1){
+			transform:translateX(-140px) translateY(150px);
+		}
+		.box p:nth-of-type(2){
+			transform:translateX(-180px) translateY(180px);
+			transition: 1s 0.1s;
+		}
+		.box p:nth-of-type(3){
+			transform:translateX(-220px) translateY(210px);
+			transition: 1s 0.2s;
+		}
+		.box:hover p:nth-of-type(1){
+			transform:translateX(50px) translateY(150px);
+		}
+		.box:hover p:nth-of-type(2){
+			transform:translateX(50px) translateY(180px);
+		}
+		.box:hover p:nth-of-type(3){
+			transform:translateX(50px) translateY(210PX);
+		}
+		.box:hover img{
+			transform: perspective(1000px) scale(1.5) rotateX(45deg);
+		}
+	</style>
+	<body>
+		<div class="box">
+			<img src="img/ai.png">
+			<h2>Taylor Swift</h2>
+			<p class="p1"> Birthday:1989.12.13</p>
+			<p class="p2"> Height:180cm</p>
+			<p class="p3"> Weight:56kg</p>
+		</div>
+	</body>
+</html>

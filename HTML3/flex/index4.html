@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0; padding:0px;
+		}
+		html{
+			font-size:10px; background-color:#FFB6C1;
+			display: flex;
+		}
+		header{
+			width:100%; height:8rem;
+			background-color: white;
+			border: none;
+		}
+		input{
+			width:100%;
+			height:10px;
+			padding:1rem;
+			border-radius: 5rem;
+			margin: 5px;
+
+		}
+		.nav{
+			width: 100%; height:2rem;
+			display:flex;
+			flex-wrap:wrap;			
+		}
+		.calssify::after{
+			content:"";
+			display: block;
+			flex-grow: 1;
+		}
+		 .nav span{
+			 border: 1px solid none;
+			 margin: 0.1rem 1rem;
+			 padding: 0.3rem 2rem;
+			 border-radius: 20px;
+			 background-color: #00FF7F;
+		}
+		.classify{
+			 width:100%;
+			 height:12rem;
+			 background-color: white;
+			 border-top: 1px solid gray;
+			 display:flex;
+			 flex-wrap:wrap;
+		}
+		.calssify::after{
+			content:"";
+			display: block;
+			flex-grow: 1;
+		}
+		.classify span{
+			 border: 1px solid none;
+			 margin: 1rem;
+			 padding: 1rem 2rem;
+			 border-radius: 20px;
+			 background-color: indianred;
+			 flex-wrap:wrap;
+			 justify-content:space-between;
+			 font-size: 3px;
+			 text-align: center;
+		}
+		.box{
+			width:100%; height:5rem;
+			background-color: white;
+			display: flex;
+		}
+		.box1{
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			background-color: white;
+			margin: 1px;
+			border-right: 1px solid red;
+			display: flex;
+			width: 20%; height: 4rem;
+		}
+		.box2{
+			flex-direction: column;
+			justify-content:space-between ;
+			width:60%; height:4rem;
+			background-color: white;
+			margin: 1px 15px;
+			float:left;
+		}
+		.box2 span:nth-of-type(1){
+			font-size: 15px;
+			display: flex;
+		}
+		.box2 span:nth-of-type(2)){
+			font-size: 3px; 
+			color: #555555;
+			display: flex;
+		}
+		.chioce{
+			background-color: white;
+			width: 100%; height:4rem; line-height;4rem;
+			color: darkgoldenrod;
+			font-family: "arial black";
+			font-size: 20px;
+			padding:3rem 0 1rem 3rem;
+		}
+		.chioce-items {
+			width: 100%;height: 8rem;line-height: 8rem;
+			background-color: white;
+		}
+		.chioce-items::after{
+			content:"";
+			display: block;
+			flex-grow: 1;
+		}
+		.chioce-items span{
+			width: 6rem;height: 4rem;line-height: 4rem;
+			background-color: #00FFFF;
+			border: 1px solid none;
+			flex-wrap:wrap;
+			border-radius: 20px;
+			padding: 1rem 2rem;
+			margin:1rem 2rem;
+		}
+		.bottom{
+			width: 100px;height: 2rem;line-height: 2rem;
+		}
+		.bottom-items span{
+			width: 4rem;height: 2rem;line-height: 2rem;
+			background-color: red;
+			color: white;
+			border: 1px solid none;
+			flex-wrap:wrap;
+			border-radius: 10px;
+			padding: 1rem;
+			margin:1rem 4rem;
+		}
+	</style>
+	<body>
+		<header>
+			<p>
+				<input type="text" placeholder="武圣羊杂割 &nbsp;满30减6" style="font-size: 5px;"/>
+			</p>
+			<p class="nav">
+				<span>Pizza</span>
+				<span>必胜客</span>
+				<span>肯德基</span>
+				<span>汤</span>
+				<span>牛排</span>
+				<span>红酒</span>
+			</p>
+		</header>
+		<p>
+		<section class="classify">
+			<span>超市便利</span>
+			<span>蔬菜水果</span>
+			<span>买药</span>
+			<span>跑腿代购</span>
+			<span>包子粥铺</span>
+			<span>早餐</span>
+			<span>汉堡披萨</span>
+			<span>天天神卷</span>
+			<span>浪漫鲜花</span>
+		</section>
+		</p>
+		<p>
+			<div class="box">
+				<div class="box1">
+					<span>赚钱</span>
+					<span>任务</span>
+				</div>
+			
+				<div class="box2">
+					<span>餐点打卡领金币 &nbsp; &nbsp; <span style="color: red;">+5</span></span>
+					<span>每天两次，签到就能领</span>
+				 </div>
+			</div>
+		</p>
+		<p class="chioce">为你优选</p>
+		<p class="chioce-items">
+				<span>三米粥铺</span>
+				<span>有范儿营养早餐</span>
+				<span>京味早餐</span>
+		</p>
+		<bottom>
+			<p class="bottom">
+				<p class="bottom-items">
+					<span>首页</span>
+					<span>赚钱</span>
+					<span>订单</span>
+					<span>我的</span>
+				</p>
+			</p>
+		</bottom>
+	</body>
+</html>

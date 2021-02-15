@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{width:300px; height:300px; border:1px solid red;}
+			.box:hover{background:green;}
+			.box::selection{background:red; color:white;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			为了弥补常规CSS的不足，以便获取更多信息，通常表示获取不存在与DOM树中的信息，或获取不能被常规CSS选择器获取的信息。
+			伪元素： 二个冒号   ::selection    ::first-line/first-letter   ::before/after …
+			     本质上创建了一个有内容的虚拟容器，这个容器不包含任何DOM元素，但是可以包含内容。另外，开发者还可以为伪元素定制样式。
+		</div>
+	</body>
+</html>

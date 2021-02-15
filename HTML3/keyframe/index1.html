@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin:0; padding:0;
+		}
+		.container{
+			width:1200px; margin:auto;
+			position:relative;
+		}
+		.point{
+			width: 10px; height:10px; display:block;
+			background: #0000FF;
+			border-radius: 50%;
+			position:absolute;
+		}
+		.ripple-1{
+			animation: ripple 4500ms 225ms infinite;
+		}
+		.ripple-2{
+			animation: ripple 4500ms 1575ms infinite;
+		}
+		.ripple-base{
+			width:120px; height:120px;
+			border:2px solid blue;
+			border-radius: 50%;
+			transform: scale(0.01);
+			position:absolute; left: -57px; top: -57px;
+		}
+		@keyframes ripple{
+			100%{
+				opacity: 0; transform: scale(1);
+			}
+		}
+	</style>
+	<body>
+		<div class="container">
+			<img src="img/t01fccf1762573d57f0.jpg" style="width:100%">
+			<div class="point" style="top:550px;left:950px;">
+				<div class="ripple-base ripple-1"></div>
+				<div class="ripple-base ripple-2"></div>
+			</div>
+			<div class="point" style="top:200px;left:950px;">
+				<div class="ripple-base ripple-1"></div>
+				<div class="ripple-base ripple-2"></div>
+			</div>
+			<div class="point" style="top:800px;left:650px;">
+				<div class="ripple-base ripple-1"></div>
+				<div class="ripple-base ripple-2"></div>
+			</div>
+		</div>
+	</body>
+</html>

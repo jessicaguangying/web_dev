@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./CSS/common13.css">
+		<style>
+			#main{background-image: url(imgs/banner-html5.jpg) no-repeat center 0;}
+			#nav{min-height:236px; background: url(imgs/1.jpg) repeat-x,url(imgs/banner_btn.gif) no-repeat;}
+			#nav .nav_logo img{width:200px; height:52px; margin:50px auto;border:1px #FF0000 solid}
+			#nav dl{position:absolute; top:0;}
+			#nav dt{height:66px;}
+			#nav dt a{height:100%; height:100%; display:block; text-indent:-9999px; overflow:hidden;}
+			#nav dd{line-height: 27px;font-size: 12px;text-align:center;}
+			#nav dd a{color:black;position:relative;}
+			#nav dd a:hover{color:red;}
+			#nav dd a .hot:after{content:""; display:block; background-image: url(./imgs/gwba-2.png); position:absolute;}
+			#nav dd a .new:after{content:""; display:block; background-image: url(./imgs/gwba-2.png); position:absolute;}
+			#nav .nav_index{width:65px;left:0px;border: 1px red solid;color:black;}
+			#nav .nav_zl{width:69px; left:100px;}
+			#nav .nav_ss{width:74px; left:200px;}
+			#nav .nav_hd{width:68px; left:300px;}
+			
+			#banner{height:276px; background:url(imgs/4.jpg) no-repeat;margin-top:10px;}
+			#banner .banner_left{width:240px; height:310px; background:url; margin:-20px 0 0 7px;}
+			#banner .banner_downlod p{width:91px; height:25px; backrgound:url      -253px 0; margin:0 auto;text-indent:-99999px; overflow:hidden;}
+			#banner .banner_downlod p:first-child{background-position:-253px 0; margin-top:44px;}
+			#banner .banner_downlod p:last-child{background-position:-253px -25px;}
+			
+			#banner .banner_downlod:hover p:first-child{ animation:5s upmove;}
+			@keyframes upmove{
+				0%{transform:translateY(-40px); opacity:0}
+				100%{transform:translateY(0); opacity:1}
+			}
+			#banner .banner_downlod:hover p:last-child{ animation:5s downmove;}
+			@keyframes downmove{
+				0%{transform:translateY(40px); opacity:0}
+				100%{transform:translateY(0); opacity:1}
+			}
+			#banner .banner_user div{width:56px; height:56px; border-radius:50%; margin:80px auto 0 auto; border:4px black solid; box-sizing:border-box; overflow:hidden;}
+			#banner .banner_user p{text-align:center; font-size:12px; color:red; margin-top:25px;}
+			#banner .banner_user a{ color:green;}
+			
+			#banner .banner_list{width:497px;height:253px;overflow:hidden; margin:13px 0 0 6px;position:relative;}
+			#banner .banner_list_ul{width:2000px;}
+			#banner .banner_list_ul li{width:497px; height:253px; float:left;}
+			
+			#banner .banner_bottomline{height:100%; background: rbga(0, 0, 0, 0.5);border-top:1px blue solid;position:absolute;}
+			#banner .banner_bottomline_ul{text-align: center; margin-top:11px;}
+			#banner .banner_bottomline_ul li{display:inline-block; width:15px; height:15px;background-image: url no-repeat -603px -299px;cursor:pointer;}
+		    #banner .banner_bottomline_ul li:active{background-position:-581px -299px;}
+		
+			#banner .banner_bottomline_leftbtn{width:12px; height:22px;position:absolute; left:5px; top:2px;background-image: url(./imgs/turn_left.png) no-repeat;cursor:pointer;}
+			#banner .banner_bottomline_rightbtn{position:absolute; left:5px; top:2px;background-image: url(./imgs/turn_right.png) no-repeat;cursor:pointer;}
+		    #banner .banner_bottomline_leftbtn:hover{color:red;}
+			#banner .banner_bottomline_rightbtn:hover{color:red;}
+		</style>e
+	</head>
+	<body>
+		<div id="head" class="contianer-fluid">
+			<div class="container">
+				<div class="head_logo l">
+					<a href="#">腾讯广告</a>
+				</div>
+				<div class="head_ad l">
+					<img src="./imgs/xinlang.jpg" alt="">
+				</div>
+				<div class="head_menu r">
+					<div id="head_menu_czsh l">
+						<a href="#">成长守护平台</a>
+					</div>
+					<div id="head_menu_top l">
+						<a href="#">腾讯游戏排行榜</a>
+					</div>					
+				</div>
+			</div>
+		</div>
+		<div id="mian" class="container-fluid">
+			<div id="nav" class="container-fluid">
+				<div class="container">
+					<div class="nav_logo">
+						<a href="#">
+							<img src="./imgs/logo.png" alt="QQ飞车" title="QQ飞车">
+						</a>
+					</div>
+					<dl class="nav_index">
+						<dt>
+							<a href="#">首页</a>
+						</dt>
+					</dl>
+					<dl class="nav_zl">
+						<dt></dt>
+						<dd><a class="hot" href="https://www.baidu.com/">新手指引</a></dd>
+						<dd><a class="new" href="#">官方漫画</a></dd>
+						<dd><a href="#">新手指引</a></dd>
+						<dd><a href="#">游戏下载</a></dd>
+					</dl>
+					<dl class="nav_ss">
+						<dt></dt>
+						<dd><a href="#">全民争霸</a></dd>
+						<dd><a href="#">官方漫画</a></dd>
+
+					</dl>				
+					<dl class="nav_hd">
+						<dt></dt>
+						<dd><a href="#">版本专区</a></dd>
+						<dd><a href="#">官方漫画</a></dd>
+						<dd><a href="#">新手指引</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="banner" class="container" >
+				<div class="banner_left l">
+					<div class="banner_downlod">
+						<p>下载游戏</p>
+						<p>DOWNLOD</p>
+					</div>
+					<div class="banner_user">
+						<div><img src="./imgs/1.jpg" alt="">
+						</div>
+						<p>欢迎<a href="#">登录</a>，进入飞车世界</p>
+					</div>
+				</div>
+				<div class="banner_center l"></div>
+					<div class="banner_list">
+						<ul class="banner_list_ul">
+							<li>
+								<a href=""><img src="" alt=""></a>
+							</li>
+							<li>
+								<a href=""><img src="" alt=""></a>
+							</li>
+							<li>
+								<a href=""><img src="" alt=""></a>
+							</li>
+						</ul>
+					</div>
+						<div class="banner_bottomline">
+							<ul class="banner_bottomline_ul">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div class="banner_bottomline_leftbtn"></div>
+							<div class="banner_bottomline_rightbtn"></div>
+						</div>
+							<i class="banner_list_lt"></i>
+							<i class="banner_list_lt"></i>
+							<i class="banner_list_lt"></i>
+							<i class="banner_list_lt"></i>
+				<div class="banner_right l"></div>
+			</div>
+		</div>
+	</body>
+</html>

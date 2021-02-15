@@ -1,0 +1,26 @@
+*{margin:0; padding:0}
+ul,ol{list-style:none;}
+img{display:block;}
+a{ text-decoration: none; color:black;}
+h1,h2,h3{ font-size:16px;}
+body{font-family: arial;}
+
+.l{float:left;}
+.r{float:right;}
+.clear:after{content:""; display:block; clear:both;}
+.container{width:1400px;margin:0 auto; position:relative;}
+.container-fluid{width:100%;}
+
+#head{height:81px;}
+#head .head_logo{width:163px;height:44px;margin-top:19px;margin-right:150px;}
+#head .head_menu{font-size:14px; line-height:81px;}
+#head .head_menu li{float:left; margin-left: 120px;}
+
+#foot{background:green;}
+#foot .container{height:56px;line-height:56px;font-size:20px; color:white;}
+#foot div p{margin-left:50px;}
+#foot div a{color:white;margin:0 50px;}
+
+.area-title{margin-top:60px; text-align:center;}
+.area-title h2{height:20px; line-height:20px;font-size:20px; color:orange;background-image: url(../imgs/turn_left.png);}
+.area-title p{color:red; font-size:14px; line-height:34px;}
