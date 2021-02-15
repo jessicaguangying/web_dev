@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf 8">
+		<title></title>	
+	</head>
+	<body>
+		<script>
+			//var num1 = 7;
+			//var num2 = 6;
+			//var min = num1 > num2 ? num2 : num1;
+			//while(1){
+				//if(num1 % min == 0 && num2 % min == 0){
+				//	break;
+				//}
+			//	min--;
+		//	}
+			//alert(“两者最大公约数是：” + min);
+		//	
+			
+			
+			//var num1 = 8;
+			//var num2 = 3;
+			//var max = num1 < num2 ? num2 : num1;
+			//while(1){
+				//if(num1 % max == 0 && num2 % max == 0){
+				//	break;
+			//	}
+			//	max++
+		//	}
+			//alert(max);
+			
+			var n = 4;
+			var a = 3;
+			var tmp = a; // tmp是每一次累加的数
+			var sum = 0;
+			for(var i = 0; i < n; i++){
+				sum += tmp;
+				alert(tmp);
+				tmp = tmp * 10 + a;
+			}
+			alert(sum);
+			
+			
+			for(var i = 10000; i < 100000; i++){
+				var a = i % 10;
+				var b = parseInt(i / 10) % 10;
+				var c = parseInt(i / 1000) % 10;
+				var d = parseInt(i / 10000);
+				
+				if(a == d && b == c){
+					document.write(i + "<br/>"); 
+				}
+			}
+			
+			
+			var year = 2008;
+			var month = 8;
+			var date = 8;
+			var sum = 0;  //记录总天数
+			switch(month){
+				case 12:
+					sum += 30;
+				case 11:
+					sum += 31;
+				case 10:
+					sum += 30;
+				case 9:
+					sum += 31;					
+				case 8:
+					sum += 31;					
+				case 7:
+					sum += 30;
+				case 6:
+					sum += 31;				
+				case 5:
+					sum += 30;										
+				case 4:
+					sum += 31;										
+				case 3:
+					sum += 28;	
+					if(year % 4 == 0 && year % 100 != 0 || year % 400 ==0){
+					sum += 1;	
+					}															
+				case 2:
+					sum += 30;					
+				case 1:
+					sum += date;
+				default:
+					alert("error");
+					break;
+			}
+			
+			alert("这是第：" + sum + "天");
+			
+			// var week = parseInt( sum / 7) + 1;
+			var week = Math.ceil(sum / 7);  向上取整
+			alert("这是第：" + week + "周");
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

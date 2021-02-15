@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<script>
+		// math.pow(x,y); 求x的y次方
+			for(var i = 100; i <= 1000; i++){
+			// 每一位都取出
+				var a = i % 10;
+				var b = parseInt(i / 10) % 10;
+				var c = parseInt(i / 100);
+				//立方和
+				var sum = Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3);
+				if(i == sum){
+				document.write(i + "<br/>")
+				}
+			
+			}
+		</script>
+	<body>
+</html>
