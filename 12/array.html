@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		// var arr = ["北京" , "上海” , “广东”];
+		// arr.push("天津" , "山东” , “重庆”);
+		// alert(arr);
+		
+		
+		// var arr = ["北京", "山海","广东"];
+		// var res = arr.push("深圳","天津","重庆");
+		// alert(arr);
+		// alert(res);
+
+
+		/*var arr = ["北京", "山海","广东"];
+		var res = arr.pop();
+		alert(arr);
+		alert(res);	*/
+
+/*
+		var arr1 = [10,20,30]; 
+		var arr2 = [50,60,70];
+		var newArr = arr1.concat(arr2,"hello",true);
+		alert(newArr);
+		alert(newArr.length);
+		alert(arr1);
+*/
+	/*	var arr1 = [10, 20, 30, 40, 50, 60];
+		var newArr = arr1.slice(1,4);
+		alert(newArr);
+		alert(arr1);
+     */
+	 /*
+		var arr = [10, 20, 30, 40, 50, 60];
+		var newArr = arr.splice(2,2,"hello", "world");
+		alert(arr);
+		alert(newArr);
+	*/
+		
+	/*    var arr = [10, 20, 30, 40, 50, 60];
+		var res = arr.join("&&&");
+	    alert(res);
+		alert(arr);
+		
+	    var arr = [10,"hello","world"];
+		arr.reverse();
+		alert(arr);
+	*/
+	/*	
+	   var arr = [10,50,20,40,60,30];
+	   arr.sort();
+	   alert(arr);
+	   
+	   var arr = [10,5,2,210,60,30];
+	   arr.sort();
+	   alert(arr); 
+	  */ 
+	   
+	/* var arr = [10,5,2,210,60,30];
+	 var max = arr[0];
+		for(var i = 0; i < arr.length; i++){
+			if(max < arr[i]){
+				max = arr[i];
+			}
+		}
+		alert(max);
+	  
+	*/
+	/*
+	//what execute? why?
+	 var arr1 = [10,5,2,210,60,30];//定义并赋值：此句位于全局，因此被执行
+	//定义函数：此句位于全局，因此被执行;
+	//执行结果：函数全局范围可用、可见，但函数体在定义时不被执行
+	 function maxNumber(arr){  
+	    var max = arr[0];
+		for(var i = 0; i < arr.length; i++){
+			if(max < arr[i]){
+			   max = arr[i];
+			}
+		}
+		return max;
+	}
+	var result = maxNumber(arr1); //调用函数maxNumber并将返回值赋值给变量result：此句位于全局，因此被执行
+    console.log(result); 
+
+*/
+	 
+	   //1、声明数组
+	   var arr = new Array(30); 
+	   for(var i = 0; i < arr.length; i++){
+			arr[i] = i * 2 + 2;
+	   }
+	   //2、求平均数
+		var averageArr = [];
+		for(var i = 0; i < 6; i++){
+		//3、取出求平均数的这组数
+			var newArr = arr.splice(0,5);
+			//4、求平均值
+			var sum = 0; //求和数
+			for(var j = 0; j < newArr.length; j++){
+				sum += newArr[j];
+			}
+			averageArr.push(sum / 5);
+		} 
+			alert(averageArr);
+			
+		
+		
+	
+	/*
+
+		var arr1 = [10,5,2,210,60,30];
+		var arr2 = [39,50,49,284,58]
+		 function maxNumber(arr){  
+			var max = arr[0];
+			for(var i = 0; i < arr.length; i++){
+				if(max < arr[i]){
+				   max = arr[i];
+				}
+			}
+			return max;
+		}
+		var result = maxNumber(arr2); 
+		document.write(result); 
+		
+		*/
+	
+		</script>
+
+	</body>

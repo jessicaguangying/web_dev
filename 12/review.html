@@ -1,0 +1,105 @@
+<!DOVTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<script>
+		/*
+		var n = 2019;
+		var year = n;
+			if(year % 4 == 0 && year % 100 != 0 || year % 4 ==0 ){
+				document.write("闰年：" + year);
+			}else(document.write("平年：" + year))
+		*/
+		
+		/*
+		var year = "2020"
+		var month = "2";
+		switch (month){
+			case "1":
+				alert("30天"); 
+				break; 
+			case "2":
+				alert(year + "，2月");
+				if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+					alert("29天");
+				}else("28天")
+				break; 			
+			case "3":
+				alert("30天");
+				break; 		
+			case "1":
+				alert("30天");
+				break; 
+			default:
+				alert("error");
+				break;
+		}
+		
+		*/
+		
+		/*
+		var i = 0;
+		while(i < 10){
+			document.write("hello world" + " ;<br/>");
+			i++;
+		}
+		*/
+		
+		/*
+		var i = 1;
+		var sum = 0;
+		while(i <= 10){
+			sum += i
+			i++;
+		}
+		alert(sum);
+		
+		*/
+		
+		/*
+		var i = 1;
+		var sum = 0;
+		while (i <= 100){
+			if(i % 2 == 0){
+			   sum -=  1/i;
+			}else{
+				sum += 1/i;
+			}
+			i++;
+		}
+		alert(sum);
+		
+		*/
+		
+		/*
+		var i = 1000;
+		var count = 0;
+		while(i <= 2000){
+			if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+			   document.write( i + ",");
+				count++;
+				if(count % 4 == 0){
+					document.write("<br/>")
+				}
+			}
+			i++;
+		} 
+		
+		*/
+		
+		for(var i = 1; i <= 11; i++){
+	
+			if(i % 5 == 0){
+				continue;
+			}
+			document.write(i + ",");
+		}
+		
+		
+		</script>
+	</body>
+</html>

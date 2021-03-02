@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<script>
+		/*var num1 = 10;
+		var num2 = num1;
+		num2 = 20;
+		alert(num1 + "," + num2);
+		*/
+		/*
+		var arr1 = [10,20,30,40];
+		var arr2 = arr1;
+		arr2.push(50,60);
+		alert(arr1);
+		alert(arr2);
+		*/
+
+     /*
+		var arr1 = [10,20,30,40];
+		var arr2 = arr1.concat();
+		arr2.push(50,60);
+		alert(arr1);
+		alert(arr2);		
+		
+	*/
+
+	/*
+	 function show(){
+	 alert(num);
+	 var num = 10;
+	 alert(num)
+	 }
+	 show();
+	 alert(num);
+	 
+	*/
+	
+	/*
+	 function show(){
+	 num = 10;
+	 alert(num);
+	 }
+	 show();
+	 alert(num);
+	*/
+	
+	/*
+	function sum(n){
+		var res = 0;
+		for( var i = 1; i <= 10; i++){
+		res += i;
+		}
+		return res
+	}
+	var res = sum(10);
+	alert(res);
+	*/
+	
+	/*unction sum(n){
+		if(n == 2){
+			return 3;
+		}
+		return sum(n - 1) + n;
+	}
+	var result = sum(100);
+	alert(result);
+	*/
+	//var arr1 = [20,30,50];
+	//var arr = [true, 10,"hello", arr1];
+	//alert(arr);
+	//alert(arr.length);
+	//alert(arr[3] == arr1);
+	//alert(arr[3]);
+	//alert(arr1[1])
+	//alert(arr[3][1])
+	
+	var arr = [
+		[1,2,3,4,5],
+		[6,7,8,9,10],
+		[11,12,13,14,15],
+		[16,17,18,19,20],
+		[21,22,23,24,25]
+	];
+	/*
+	for(var i = 0; i < arr.length; i++){
+		for(var j = 0; j <= i; j++){
+			document.write(arr[i][j] + "&nbsp;");
+		}
+		document.write("<br/>");
+	}
+	*/
+	
+		for(var i = 0; i < arr.length; i++){
+		    for(var j = 0; j < arr.length; j++){
+				if(i >= j){
+				document.write(arr[i][j] + "&nbsp;");
+			}
+		}
+		document.write("<br/>");
+	}
+	
+		</script>
+	</body>
+</html>

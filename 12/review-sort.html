@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		div{width:100px; height:100px; border:1px solid red;}
+		</style>
+	</head>
+	<body>	
+		<div>加油</div>
+		
+		<script>
+		
+		/*
+			var arr = [5,7,3,4,1,9];
+			function changSortAsc(arr){
+				for(var i = 0; i < arr.length -1; i++){		
+					for(var j = 0; j < arr.length - (i + 1); j++){
+						if(arr[i] > arr[j]){
+							var tmp = arr[i];
+							arr[i] = arr[j];
+							arr[j + 1] = tmp;
+						}
+					}
+				}
+				return arr;
+			}
+			var result = changSortAsc(arr);
+			alert(result);
+			*/
+			/*
+			
+			var arr = [9,8,17,6,3,4];
+			var minIndex,tmp;
+			for(var i = 0; i < arr.length - 1; i++){	
+				minIndex = i;
+					for(var j = i + 1; j < arr.length; j++){
+						if(arr[j] > arr[minIndex]){
+							minIndex = j;
+						}
+					}
+				var tmp = arr[i];
+				arr[i] = arr[minIndex];
+				arr[minIndex] = tmp;			
+			}
+			alert(arr); 
+			
+			
+			
+			
+			var arr = [9,1,7,16,5,4];
+			function selectionSort(arr) {
+				var len = arr.length;
+				var manIndex, temp;
+				for (var i = 0; i < len - 1; i++) {
+					manIndex = i;
+					for (var j = i + 1; j < len; j++) {
+						if (arr[j] < arr[manIndex]) {     
+							manIndex = j;  
+						}
+					}
+
+					temp = arr[i];
+					arr[i] = arr[manIndex];
+					arr[manIndex] = temp;
+				}
+				return arr;	
+			}
+			var result = selectionSort(arr);
+			alert(result);
+			*/
+			
+			
+			/*
+			var arr = [9,1,7,16,5,4];
+			function selectionSort(arr) {
+				var len = arr.length;
+				var minIndex, temp;
+				for (var i = 0; i < len - 1; i++) {
+				
+					minIndex = i;
+					console.log(minIndex + ",i=" + i);
+					for (var j = i + 1; j < len; j++) {
+					console.log(minIndex + ",i=" + i + ",j=" + j);
+						if (arr[j] < arr[minIndex]) {     
+							minIndex = j;  
+							console.log("swap:" + minIndex + ",i=" + i + ",j=" + j);	
+						}
+					}
+
+					temp = arr[i];
+					arr[i] = arr[minIndex];
+					arr[minIndex] = temp;
+				}
+				return arr;	
+			}
+			var result = selectionSort(arr);
+			console.log(result);
+			
+			*/
+			
+			/*
+			var arr =[3,4,7,2,5];
+			for(i = 0; i < 4; i++){
+				console.log(i);
+				document.write(arr[i]);
+				
+			}
+			*/
+			
+			/*
+			var arr = [9,8,7,6,5,4];
+			
+				for(var i = 0; i < arr.length - 1; i++){
+					console.log("i" + i);
+					for(var j = 0; j < arr.length - (i + 1); j++){
+					console.log("j" + j + "j数" + arr[j]);
+						if(arr[j] > arr[j + 1]){
+							var tmp = arr[j];
+							arr[j] = arr[j + 1];
+							arr[j + 1] = tmp;
+						}
+					}
+				}
+				alert(arr);
+			*/
+			/*
+			var arr = [9,8,7,2,5,4];
+			for(var i = 0; i < arr.length -1; i++){		
+				for(var j = 0; j < arr.length - (i + 1); j++){
+					if(arr[j] > arr[j + 1]){      
+						var tmp = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = tmp;
+					}
+				}
+			}
+			alert(arr);   
+*/  
+
+/*
+			
+			var arr = [9,1,7,16,5,4];
+				for (var i = 0; i < arr.length - 1; i++) {			
+					for (var j = i + 1; j < arr.length; j++) {
+						if (arr[j] < arr[i]) { 
+							var temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;						
+						}
+					}
+				}
+				alert(arr);
+
+
+				var arr = [9,1,19,16,5,4];
+				for (var i = 0; i < arr.length - 1; i++) {			
+					for (var j = 0; j < arr.length - (i +1); j++) {
+						if (arr[j] > arr[j + 1]) { 
+							temp = arr[j];
+							arr[j] = arr[j + 1];
+							arr[j +1] = temp;						
+						}
+					}
+				}
+				alert(arr);
+			
+	*/		/*
+			var arr = [2,5,8,3,9];
+			for(i = 0; i < arr.length; i++){
+				console.log("i:" + i);
+				console.log("数值：" + arr[i]);
+			}
+			*/
+			/*
+				var arr = [9,1,7,16,5,4];
+				for (var i = 0; i < arr.length - 1; i++) {			
+					for (var j = i + 1; j < arr.length; j++) {
+						if (arr[i] > arr[j]) { 
+							var temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;						
+						}
+					}
+				}
+				alert(arr);
+			*/
+			/*
+			
+				var arr = Array(9,1,7,16,5,4);
+				for (var i = 0; i < arr.length - 1; i++){
+					if(arr[i] > arr[i + 1]){
+						var temp = arr[i];
+						arr[i] = arr[i + 1];
+						arr[i + 1] = temp;
+					}			
+				}
+				alert(arr);
+			*/
+			
+			/*
+			var i = 1000;
+			var count = 0;
+			while(i <= 2000){
+				if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+					document.write(i + ",");
+					count = i;
+					if(count % 5 == 0){
+						document.write("<br/>");
+					}
+				}
+			i++;
+			}
+			
+			
+			var arr = [1,2,3];
+			var res = arr.join("&&&");
+			console.log(res);
+			*/
+		</script>
+	</body>
+</html>

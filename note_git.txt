@@ -1,0 +1,18 @@
+Linux:
+~: home directory(user/wangguangying)
+cd /c/web_dev: change directory    改变目录
+ls -al: list all files in current directory     目录下文件
+pwd: show current path      当前所在目录
+mv old_file new_file   :改名
+
+
+Git:
+git init: intialize git directory  执行完此句后，当前目录内的所有文件被git监控和管理
+git status: show git files status       显示是否有修改，添加等
+git remote -vv: show git remote server info      显示url
+git diff: show file difference            
+git add: add file changes from workspace to index 
+git i -m "message": commit file changes from index to local repository
+git log: show commits in local repo    
+git branch: show current branch    分支
+git push origin main    

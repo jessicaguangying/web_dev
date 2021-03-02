@@ -1,0 +1,130 @@
+<!DOCTPYE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+	
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		
+		/*
+		var num = 73629;
+		res1 = num % 10;
+		document.write("本次个位数为：" + res1 + "<br/>");
+		res2 = parseInt(num / 10) % 10;
+		document.write("本次十位数为：" + res2 + "<br/>");
+		res3 = parseInt(num / 100) % 10;	
+		res4 = parseInt(num / 1000) % 10;	
+		res5 = parseInt(num / 10000)	
+		document.write("本次百位数为：" + res3 + "<br/>");
+		document.write("本次千位数为：" + res4 + "<br/>");
+		document.write("本次万位数为：" + res5 + "<br/>");
+		*/
+		/*
+		var num = n;
+		var res = 0;
+		function show(){
+			if (res1 = i[0]){
+				document.write("万位数为：" + res1 + "<br/>");
+			}
+			if(res2 = i[1];){
+				document.write("千位数为：" + res2 + "<br/>");
+			}
+			return res;
+		}
+		var show(num) = 87463;
+		alert(show(num));
+		*/
+		
+		/*
+		function countOfNum(num){
+		//声明一个数组，存放取下的数
+			var arr = [];
+			while(num){
+				arr.push(num % 10);    //如后取的在前可用 unshift
+				num = parseInt(num / 10);
+			}
+			arr.reverse();    //逆序
+			alert("一共是：" + arr.length + "位" + ",每一位分别是：" + arr);
+		}
+		
+		countOfNum(4275);
+		
+		*/
+		/*
+		function has(arr, item){
+			for(var i = 0; i < arr.length; i++){
+				if(arr[i] == item){
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		document.write(has([1,5,3,60,49],50));
+		*/
+		
+		
+		/*
+		function barCode(res){
+			for(var i = 0; i < res.length; i++){
+			    if(i % 2 == 0, i % 2 != 0){
+				   res1 += arr[i];
+				}else( res2 += arr[i]);
+			}
+		     var res3 = res1 + res2 * 3
+			 var addCode = res3 % 2;
+			 result = 10 - addCode;
+			 alert(result);	 	 
+		}
+		var res = barCode(692223361219);
+		alert(res.push(result));
+		
+		*/
+		
+/*
+		alert(scan13(692223361219));
+		
+		function scan13(num){
+			var arr = [];
+			while(num){
+				arr.unshift(num % 10);
+				num = parseInt(num / 10);
+			}
+			//document.write(arr);  //6,9,2,2,2,3,3,6,1,2,1,9
+			var odd = 0;
+			var even = 0;
+			for( var i = 0; i < arr.length; i++){
+				if(i % 2 == 0){
+					odd += arr[i];
+				}else{
+					even += arr[i];
+				}
+			}
+			var sum = (odd + even * 3) % 10;
+			if(sum){              //sum不等于0
+				sum = 10 - sum;			
+			}
+		arr.push(sum);
+		return Number(arr.join(""));
+		}
+
+*/
+		
+
+				var num = [6,92,22,33,61,2,19];	
+				for(var i = 0; i < num.length; i++){
+					if( i / 2 == 0){
+					    res = i;
+						document.write( "偶数:" + i "<br/>");
+					}
+				}
+
+		
+		</script>
+	</body>
+</html>

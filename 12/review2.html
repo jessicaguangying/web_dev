@@ -1,0 +1,225 @@
+<!DOVTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<script>
+		
+		/*
+			var i = 1000;
+			var count = 0;
+			while(i <= 2000){
+				if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+					document.write(i + ",");
+					count++;
+					if(count % 4 == 0){
+						document.write("<br/>");
+					}
+				}
+				i++;	
+			}
+				
+			
+			*/
+			
+
+			/*
+
+			for(var i = 1; i <= 5; i++){
+				for(j = 1; j <= i; j++){
+					document.write("@");
+				}
+				document.write("<br/>")
+			}
+			*/
+			
+			/*
+			for(var i = 1; i <= 9; i++){
+				for(var j = 1; j <= i; j++){
+					document.write(j + "x" + i + "=" + (i*j) + "&nbsp;")
+				}
+			
+			document.write("<br/>");
+			}
+			*/
+			
+			/*
+			var water = 15;
+			var count =0 ;
+			while(water < 50){
+				water += 5;
+				count++;
+				
+			}
+			alert(count);
+		*/
+		
+		/*
+			var num = 1;
+			var sum = 0;
+			for(var i = 0; i <= 64; i++){
+				num *= 2;
+				sum += num;
+		    }
+			alert(sum);
+			
+			*/
+			/*
+			for(var i = 100; i <= 1000; i++){
+				var a = i % 10;
+				var b = parseInt(i / 10) % 10;
+				var c = parseInt(i / 100);
+				var sum = Math.pow(a,3) + Math.pow(b,3) + Math.pow(c,3);
+				if (i == sum){
+					document.write(i + "<br/>");
+				}
+			}
+			*/
+		   
+		   /*
+		   for(i = 10000; i < 100000; i++){
+			   var a = i % 10;
+			   var b = parseInt(i / 10) % 10;
+			   var c = parseInt(i / 100) % 10;
+			   var d = parseInt(i / 1000) % 10;
+			   var e = parseInt(i / 10000);
+			   var count = 0;
+			   if (a == e && b == d){
+				   document.write(i + ",")
+				   count++;
+					   if(count[i] % 5 == 0){
+						   document.write("<br/>");
+					}  
+				}
+			}
+		    */
+			
+		
+			/*	
+			var arr = Array(30);
+			for(var i = 0; i < arr.length; i++){
+				arr[i] = i * 2 + 2;
+			}
+	        var averageArr = [];
+			for(i = 0; i < 6; i++){
+				var newArr = arr.splic(0,5);
+				var sum = 0;
+				for(j = 0; j < newArr.length; j++){
+					sum += newArr[j];
+				}
+			averageArr.push(sum / 5);
+			}
+			alert(averageArr);
+				
+			*/
+			
+		/*
+			var arr1 = [10,20,30,50];
+			var arr2 = arr1;
+			arr2.push(50,80);
+			alert(arr1);
+		*/
+			
+		/*	
+			var num = 150;
+			function show(){
+			 
+			 alert(num);      
+			 var sum = 10;
+			     
+			 }
+	         show()
+		
+			 
+			 function show1(){
+			 alert(num);
+			 }
+			 show1();
+			 
+        */
+		
+		/*
+		
+			function show(i){
+				var res =0;
+				if(i < 1){
+					res = i;
+					console.log(1111);
+				}
+				if(i >= 1 && i < 10){
+					res = i * 3;
+					console.log("2222 res = " + res);
+				}
+				if(i <= 10){
+					res = i * 5;
+					console.log("3333 res = " + res);
+				}
+				return res;
+			}
+			var result = show(9);
+			console.log(result);
+			*/
+			
+			/*
+			function show(i){
+				var res =0;
+				if(i < 1){
+					res = i;
+					console.log(1111);
+				}else if(i >= 1 && i < 10){
+					res = i * 3;
+					console.log(2222);
+				}else{
+					res = i * 5
+					console.log(3333);
+				}
+			return res;
+			}
+			var result = show(9);
+			alert(result);
+			*/
+			
+			/*
+			
+			var arr = [4,25,56,86,3,6,7,30,678,356];
+			function selectionSort(arr) {
+				var len = arr.length;
+				var minIndex, temp;
+				for (var i = 0; i < len - 1; i++) {
+					minIndex = i;
+					for (var j = i + 1; j < len; j++) {
+						if (arr[j] < arr[minIndex]) {     
+							minIndex = j;                
+						}
+					}
+					temp = arr[i];
+					arr[i] = arr[minIndex];
+					arr[minIndex] = temp;
+				}
+				return arr;
+			}
+			var result = selectionSort(arr);
+			alert(result);
+			*/			
+			
+			var arr = [4,25,56,86,3,6,7,30,678,356];
+			function selectionSort(arr) {
+				var len = arr.length;
+				var minIndex, temp;
+				for (var i = 0; i < len - 1; i++) {
+					minIndex = i;
+					alert(i);
+				}
+				return arr(i);
+			}
+			var result = selectionSort(arr);
+			alert(result);
+			
+			
+			
+		</script>
+	</body>
+</html>

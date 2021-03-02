@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{ width:100px; height:200px; border:1px black solid;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		
+			function countingSort(arr, maxValue) {
+				var maxValue = 0;
+				var bucket = new Array(maxValue + 1),
+					sortedIndex = 0;
+					arrLen = arr.length,
+					bucketLen = maxValue + 1;
+
+				for (var i = 0; i < arrLen; i++) {
+					if (!bucket[arr[i]]) {
+						bucket[arr[i]] = 0;
+					}
+					bucket[arr[i]]++;
+				}
+
+				for (var j = 0; j < bucketLen; j++) {
+					while(bucket[j] > 0) {
+						arr[sortedIndex++] = j;
+						bucket[j]--;
+					}
+				}
+
+				return arr;
+			}
+			var arr = [3,6,3,9,76,45,3,2,45];
+				maxValue = 76;
+			document.write(countingSort(arr,maxValue));
+			
+		</script>
+	</body>
+</html>

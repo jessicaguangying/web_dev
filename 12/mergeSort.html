@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{ width:100px; height:200px; border:1px black solid;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		
+		var arr = [3,6,2,25,14,1,2];
+		function mergeSort(arr){
+		var len = arr.length;
+				if(len < 2) {
+					return arr;
+				}
+				var middle = Math.floor(len / 2),
+					left = arr.slice(0, middle),
+					right = arr.slice(middle);
+					return merge(mergeSort(left), mergeSort(right));
+		}
+			function merge(left, right){
+				var result = [];
+				while (left.length && right.length) {
+					if (left[0] <= right[0]) {
+						result.push(left.shift());
+					} else {
+						result.push(right.shift());
+					}
+					console.log(result);
+				}
+
+				while (left.length){
+					result.push(left.shift());
+				}	
+
+				while (right.length){
+					result.push(right.shift());
+				}	
+				return result;
+			}
+		var num =  mergeSort(arr);
+		document.write(num)
+		
+		</script>
+	</body>
+</html>

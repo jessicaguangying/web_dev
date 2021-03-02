@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{ width:100px; height:200px; border:1px black solid;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		
+			function quickSort(arr){
+				if(arr.length <= 1){
+					return arr;
+				}
+				var middleIndex = Math.floor(arr.length / 2);
+				var middleValue = arr.splice(middleIndex,1);
+				var arrleft = [];
+				var arrright = [];
+				for(i = 0; i < arr.length; i++){
+					var item = arr[i];
+					item <= middleValue ? arrleft.push(item) : arrright.push(item);
+				}
+				return quickSort(arrleft).concat(middleValue,quickSort(arrright));
+			}
+			var arr = [3,6,2,5,14,1,2];
+			result = quickSort(arr);
+			document.write(result);
+		/*
+
+		var arr = [3,6,2,5,14,1,2];
+		reslut = arr.splice(1,1);
+		document.write(reslut);
+		document.write(arr);
+		*/		
+		
+		
+		</script>
+	</body>
+</html>

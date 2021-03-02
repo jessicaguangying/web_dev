@@ -1,0 +1,100 @@
+<!DOCTPYE html>
+<html lang="en">
+<head>
+	<meta charset="utf=8">
+	<title></title>
+	<style>
+		div{width:100px; height:100px; border:1px solid black;}
+	</style>
+</head>
+<body>
+	
+	<script>
+	/*
+		function selectionSort(arr){
+		var len = arr.length;
+		var minIndex,temp;
+		for(i = 0; i < len - 1; i++){
+			minIndex = i;
+			for(j = i + 1; j < len; j++){
+				if(arr[j] < arr[minIndex]){
+					minIndex = j;
+				}
+			}
+			temp = arr[i];
+			arr[i] = arr[minIndex];
+			arr[minIndex] = temp;
+		}
+		return arr;
+		}
+		var arr = [2,4,9,18,1,23,12,5,16];
+		document.write(selectionSort(arr));
+		
+	
+		function bubbleSort(arr){
+			var len = arr.length;
+			var temp;
+			for(i = 0; i < len - 1; i++){
+				for(j = 0; j < len - (i+1); j++){
+					if(arr[j] > arr[j + 1]){
+						temp = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = temp;
+					}
+				}
+			}
+			return arr;
+		}
+		var arr = [2,4,9,18,1,23,14,5,16];
+		document.write( bubbleSort(arr));
+		
+		
+		
+		function insertionSort(arr){
+		var handle = [];
+		handle.push(arr[0]);
+		var len = arr.length;
+		var newNum,handleNum;
+		for(i = 1; i < len; i++){
+			newNum = arr[i];
+			for(j = handle.length - 1; j >= 0; j--){
+				handleNum = handle[j];
+				if(newNum >= handleNum){
+					handle.splice(j + 1,0,newNum);
+					break;
+				}
+				if(j == 0){
+					handle.unshift(newNum);
+				}
+			}
+		}
+		return handle;
+		}
+		var arr = [22,4,9,18,1,23,14,5,16];
+		document.write( insertionSort(arr));
+		
+		
+		function quickSort(arr){
+			if(arr.length <= 1){
+				return arr;
+			}
+			var middleIndex = Math.floor(arr.length / 2);
+			var	middleValue = arr.splice(middleIndex,1);
+			var arrleft = [];
+			var arrright = [];
+				for(i = 0; i < arr.length; i++){
+					var item = arr[i];
+					item <= middleValue ? arrleft.push(item) : arrright.push(item);
+				}
+			return quickSort(arrleft).concat(middleValue,quickSort(arrright));
+		}
+		var arr = [22,4,7,18,1,23,14,5,16];
+		document.write(quickSort(arr));		
+		*/
+		
+		
+		
+		
+	</script>
+</body>
+<html>
