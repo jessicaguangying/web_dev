@@ -25,6 +25,8 @@
 					var item = arr[i];
 					item <= middleValue ? arrleft.push(item) : arrright.push(item);
 				}
+				console.log(arrleft);
+				console.log(arrright);
 				return quickSort(arrleft).concat(middleValue,quickSort(arrright));
 			}
 			var arr = [3,6,2,5,14,1,2];

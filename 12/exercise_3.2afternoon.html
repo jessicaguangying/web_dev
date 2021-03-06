@@ -90,7 +90,74 @@
 		}
 		var arr = [22,4,7,18,1,23,14,5,16];
 		document.write(quickSort(arr));		
+		
+		
+		function mergeSort(arr){
+			if(arr.length < 2){
+				return arr;
+			}
+			var middle = Math.floor(arr.length / 2);
+			var left = arr.slice(0,middle);
+			var right = arr.slice(middle);
+			return merge(mergeSort(left),mergeSort(right));
+			
+		}
+		function merge(left,right){
+			var result = [];
+			while(left.length && right.length){
+				if(left[0] <= right[0]){
+					result.push(left.shift());
+				}else{
+					result.push(right.shift());
+				}
+			}
+			while(left.length){
+				result.push(left.shift());
+			}
+			while(right.length){
+				result.push(right.shift());
+			}
+			return result
+		}
+		var arr = [22,4,7,18,1,23,14,5,16];
+		document.write(mergeSort(arr));	
+		
+		
+		function countingSort(arr,minValue,maxValue){
+			var bucket = new Array(maxValue - minValue +1);
+			var sortedIndex = 0;
+			var arrLen = arr.length;
+			var bucketLen = maxValue + 1;
+			for(var i = 0; i < arrLen; i++){
+				if(!bucket[arr[i]]){
+					bucket[arr[i]] = 0;
+				}
+				bucket[arr[i]]++;
+			}
+			for(j = 0; j < bucketLen; j++){
+				while(bucket[j] > 0){
+					arr[sortedIndex++] = j;
+					bucket[j]--;
+				}
+			}
+			return arr;
+		}
+		var arr = [11,13,12,15,16,13,15,16,13,14,19];
+		var minValue = arr[0],maxValue = arr[0];
+		for(i = 0; i < arr.length; i++){
+			if(arr[i] < minValue){
+				minValue = arr[i];
+			}else if(arr[i] > maxValue){
+				maxValue = arr[i];
+			}
+		}
+		document.write(countingSort(arr,minValue,maxValue));
 		*/
+		
+		
+		
+		
+		
 		
 		
 		
