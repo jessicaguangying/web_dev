@@ -8,11 +8,183 @@ mv old_file new_file   :改名
 
 Git:
 git init: intialize git directory  执行完此句后，当前目录内的所有文件被git监控和管理
-git status: show git files status       显示是否有修改，添加等
+git status: show git files status       显示是否有修改，添加等  
 git remote -vv: show git remote server info      显示url
 git diff: show file difference           q 退出  
-git add.   git add -p    git add -A: add file changes from workspace to index 
+git add .    git add -p    git add -A: add file changes from workspace to index    
 git commit -m "message": commit file changes from index to local repository
 git log: show commits in local repo    
 git branch: show current branch    分支     *main
 git push origin main:   
+
+
+1\版本控制，版本迭代     新版本 老版本   版本管理   可以恢复以前版本
+多人开发就必须使用版本控制，
+
+2\版本控制
+	1）本地版本控制     记录文件每次更新
+	2）集中版本控制 （SVVN）所有的版本数据都保存在服务器上，协同开发者从服务器上同步更新或上传自己的修改。历史版本都在服务器上
+                  中央服务器，需要从中央服务器获得最新版本，然后工作，完成后推送到中央服务器。
+	3）分布式版本控制（git） 每个人都拥有全部代码，安全隐患。  不会因为服务器损坏或网络问题，不能工作的情况。
+                  每个人的电脑就是一个完整的版本库，工作的时候不需要联网，如在电脑上改了文件A，其他人也在电脑上改了文件A，这时，2个人只需把各自的修改推送给对方，就可互相看到对方的修改。
+				  git 可以直接看到更新了哪些代码和文件。
+3\下载git
+	如官网下载慢，可以走镜像    
+	
+    程序和右键都可以找到git
+	git bash :unix与linux风格的命令行，使用最多，推荐最多
+	git CMD: windows风格的命令行
+	git GUI: 图形界面的git，不建议使用
+
+4\ linux 命令
+	cd   改变目录
+	cd..   回退到上一个目录，直接cd进入默认目录
+	pwd		显示当前所在的目当路径
+	ls(ll)	列出当前目录中的所有文件，（ll）列出的内容更为详细
+	touch	新建一个文件  如 touch index.js     
+	rm	  删除文件  rm index.js
+	mkdir	新建一个目录，也可以叫文件夹
+	re -r    删除一个文件夹       re -r src  删除一个src目录            re -rf /  一定不能用，用了就清空了电脑上的所有程序
+	mv	移动文件，mv index.html src index.html 是我们要移动的文件，src是目标文件夹，这样写必须2个文件夹在一个目录下
+	                mv index.html test
+	reset	重新初始化终端、清屏    
+	clear 	清屏
+	history		查看命令历史
+	help	帮助
+	exit	退出
+	#	注释
+	
+5\ git 配置
+	git config -l
+	git config --global --list
+	git config --global user.name“ 名字”   设置用户名  jessica
+	git config --global user.email       jessica021866@126.com
+6\git 基本理论（核心）
+	working directory --- git add files(git add .) ---stage(index)---git commit---history ---git push ---remote directory
+						   git checkout                              git reset               git pull
+	
+	github   gitee
+7\ git 项目搭建   必须记住6个命令
+    add  index  commit  repository    push          remote
+	   checkout                    clone/faetch                pull (remote --workspace)
+	
+	创建项目
+	1）git init   初始化
+	2）克隆一个文件   git clone [url]    如 git clone https://gitee.com/kuangstudy/openclass.git     远程代码克隆到当地
+8\ git 文件操作
+	1） untracked 未跟踪    此文件在文件夹中，但并没有加入到git库，不参与版本控制，通过git add . 变为staged.
+	2) unmodify 文件已入库，未修改，即版本库中的文件快照内容与文件夹中完全一致，这种类型2种去处：（1）如被修改，变为modified.
+	                                (2) 如 使用 git rm 移动版本库，则成为untracked.
+	3）modified 文件已修改，仅仅是修改，并没有进行其他的操作，这个文件有2个去处：（1）通过git add 可进入暂存 staged 状态
+				（2）通过git checkout 则丢弃修改过，返回到unmodify状态，这个git checkout 即从库中取出文件，覆盖当前修改。
+	4）staged   暂存状态   执行git commit 则将修改同步到库中，这时库中的文件和本地文件又变为一致，文件为unmodify状态。
+	                        执行git reset HEAD filename 取消暂存，文件状态为modified.
+	git init
+	git status 
+	git add . 
+	git status  查看是否有提交的添加、修改文件， 
+	git commit -m ""
+	git status   查看是否还有待提交文件
+9\ 	忽略文件，有些不想上传
+	新建一个.gitignore 内写：
+     *.txt
+	 !lib.txt
+	 /temp                前面，向上
+	 build/
+	 doc/*.txt
+	 
+10\ 使用码云
+     github 是有墙
+	 国内多用 gitee  ,公司中有时自己搭建gitlab服务器
+	 
+	 gitee 内新建一个仓库
+	 
+11\ idea 中集成git
+     1）使用IDEA操作git
+	    添加到暂存区
+	    commit 提交
+	    push 到远程仓
+      
+12\ git 分支
+	分支在GIT 中相对较难，分支就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干预，那对现在的你也没啥影响，不过在某个
+	时间点，两个平行宇宙合并了，我们就需要处理一些问题
+	master  主分支
+	dev   开发用
+	v4.0
+	v3.0   不同的版本的分支
+	
+	1）git 分类中常用命令
+		git branch   列出所有本地分支
+		git branch -r  列出所有远程分支
+		git branch [branch-name]  新建一个分支，但依然保留在当前分支    git branch dev     git branch看dev还在main 下
+		git checkout -b[branch] 新建一个分支，并切换到该分支
+		git checkout name  切换到该分支
+		git merge[branch]  合并指定分支到当前分支
+		git branch -d[branch-name] 删除分支
+		git push origin --delete[branch-name] 删除远程分支
+		git branch -dr[remote/branch]   删除远程分支
+		
+		多个分支，如平行执行，就会导致我们代码不冲突，也就是同时存在多个版本。
+		如冲突就需要协商
+	
+	 
+1、git commit
+2、git branch
+	git branch bugFix          创建分支
+	git checkout bugFix			切换到分支
+	git checkout -b bugFix       新建分支同时切换到新建
+3、git merge
+    git merge bugFix    合并bugaFix 到main       main*
+	形成一个环，新增一个节点存放合并,代码合并
+4、git rebase 
+    git rebase bugFix    main 到bugFix     bugFix    main*下面记录到bugFix
+	git rebase main      bugFix分支 到main      bugFix*  main 
+	只做代码拷贝，代码内容不合并   
+5、HEAD
+   git checkout C3   回退引用C3代码
+6、^ 相对引用      git log 的哈希值太长，也可只输入前几位，但还是不方便
+      ^ 向上移动1个提交记录     git checkout master^
+	  也可以用HEAD作为相对引用的参照
+	  git checkout C3;  git checkout HEAD^
+7、~   不跟数字跟^一样，都是上移1个移动记录
+     ~ num     git checkout HEAD~3
+	 ~f  强制指向     git branch master HEAD~3
+	                   将master分支强制指向HEAD的第三级父提交
+8、撤销变更
+	1） 本地撤销  git reset      git reset HEAD~1    移回到head父级     原来指向的提交就跟从来没有提交过一样
+	2) 远程撤销   git revert     撤销更改并分享给别人
+				git revert HEAD  (如是分支名称，此分支必须为当前分支  *  )
+				撤销C2  在C2下多了一个C2'，此时C2'的状态与C1是相同的。
+				
+				
+远程：
+1、git clone
+2、远程分支
+    o/master  的分支，叫远程分支    分支叫master   远程仓库o   origin 缩写   远程仓库默认
+	git checkout o/master   ；  git commit
+3、git fetch   获取远程数据
+	o/master  上面的分支要是当前分支   *
+4、git pull 
+	远程分支中有新的提交时：
+	1） git fetch; git merge o/master      去完成合并
+	2） git pull 是以上的缩写
+5、模拟团队合作
+	git fakeTeamwork
+	git fakeTeamwork foo 2    指定提交数量
+6、git push          git pull 的反命令
+	变更上传到指定的远程仓库，并远程仓库上合并你的新提交，也可想象成发布你成果的命令
+7、工作偏离
+	git fetch; git rebase o/master; git push;
+	缩写git pull-rebase; git push;
+	
+	git fetch; git merge o/master; git push;
+	缩写git pull; git push;
+
+
+
+
+	
+
+	
+
+	

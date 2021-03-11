@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script>
+		/*
+			function btnClick(){
+				var oDiv = document.getElementById("div1");
+				alert(oDiv.innereHTML);
+				oDiv.innerHTML = "赋值"；
+				oDiv.innerHTML = testCode(6);
+			}	
+		
+		
+		function reverseStr(str){
+			var arr = str.split(" ");
+			document.write(arr);
+			arr.reverse();
+			return arr.join(" ");
+		}
+		var str = "Welcome to Beijing";
+		alert(reverseStr(str));
+		
+		
+		
+		function reverseStr(str){
+			var str = str.split(" ");
+			str.reverse();
+			return str.join(",");
+		}
+		var str = "one two three";
+		var str1 = "one,two,three";
+		var result = reverseStr(str);
+		document.write(str1.concat(result));
+		
+		
+		function symmetryArr(arr){
+			var newArr = arr.concat();
+			for(var i = arr.length -1; i >= 0; i--){
+				newArr.push(arr[i]);
+			}
+			return newArr;
+		}
+		document.write(symmetryArr("one","two","three"));
+		
+		
+		function countingOfword(str){
+			for(i = 0; i < str.length; i++){
+			document.write(i);
+			}
+			return i;
+		}
+		var str = "Yes,she*is%my@love."
+		document.write(countingOfword(str));
+		
+		
+		
+		function countOfWord(str){
+			var count = 0;
+			for(var i = 0; i < str.length - 1; i++){
+				if(isABC(str[i]) && !isABC(str[i + 1])){
+					count++;
+				}
+			}
+			return count;
+		}
+		var str = "Yes,she*is%my@love."
+		document.write(countOfWord(str));
+		
+		function isABC(charStr){
+			if(charStr >= "a" && charStr <= "z" || charStr >= "A" && charStr <= "Z"){
+				return true;
+			}else{
+				false;
+			}
+		}
+		var charStr = "w";
+		alert(isABC(charStr));
+		
+		
+		function countOfStr(supStr,subStr){
+			var arr = supStr.split(subStr);
+			return arr.length - 1;
+		}
+		var supStr = "abcabcabc";
+		var subStr = "abc";
+		document.write(countOfStr(supStr,subStr))
+	
+		
+		function isEmail(email){
+			var index = email.indexOf("@");
+			if (index == -1){
+				return false;
+			}else{
+				var endStr = email.substring(index);
+				if(endStr != "@1000phone.com"){
+					return false;
+				}else{
+					var username = email.substring(0,index);
+					var isYes = true;
+					for(var i = 0; i < username.length; i++){
+						if(!isDEF(username[i])){
+							isYes = false;
+							break;
+						}
+					}
+					return isYes;
+				}
+			}
+		}
+		document.write(isEmail("email123@1000phone.com"));
+		
+		
+		function isDEF(charStr){
+			if(charStr >= "a" && charStr <= "z" || charStr >= "A" && charStr <= "Z" || charStr >= "0" && charStr <= "9" || charStr == "_"){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		alert(isDEF("_"))
+			*/
+			
+			// 表单元素，获取其中内容，通过.value的属性
+			//双标签节点 innerHTML属性，获取标签间内容
+			
+			//要求：
+			//1、敏感词都过滤 ,通过正则表达式
+			//2、将敏感词换成*    replace()
+			
+			//敏感词
+			var arr = [/靠/ig,/tmd/ig,/nm/ig];
+			function btnClick(){
+				var oTxt = document.getElementById("txt1");
+				var oMsg = document.getElementById("msg");
+				
+				var oValue = oTxt.value;
+				for(var i = 0; i < arr.length; i++){
+					oValue = oValue.replace(arr[i],"*");	
+				}
+				oMsg.innerHTML = oValue;
+				oTxt.value = "";     //发布后清空textarea内容
+			}
+		</script>
+		<style>
+			#msg{width:400px; height:200px;border: 1px solid black;}
+		</style>
+	</head>
+	<body>
+		<textarea name = "" id = "txt1" cols = "30" rows = "10"></textarea>
+		<button onclick = 'btnClick();'>发布</button>
+		<div id = 'msg'></div>
+	</body>
+</html>

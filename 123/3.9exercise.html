@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*
+			function selectionSort(arr){
+				var len = arr.length;
+				var minIndex,temp;
+				for(i = 0; i < len - 1; i++){
+					minIndex = i;
+					for(j = i + 1; j < len; j++){
+						if(arr[j] < arr[minIndex]){
+							minIndex = j;
+						}
+					}
+					temp = arr[i];
+					arr[i] = arr[minIndex];
+					arr[minIndex] = temp;
+				}
+				return arr;
+			}
+			var arr = [1,4,7,2,9];
+			alert(selectionSort(arr));
+			
+		   
+		   function bubbleSort(arr){
+			   var len = arr.length;
+			   for(i = 0; i < len -1; i++){
+				   for(j = 0; j < len - (i + 1); j++){
+					   if(arr[j] > arr[j + 1]){
+						   var temp = arr[j];
+						   arr[j] = arr[j + 1];
+						   arr[j + 1] = temp;
+					   }
+				   }
+			   }
+			   return arr;  
+		   }
+		   var arr = [3,4,7,2,9];
+		   alert(bubbleSort(arr));
+		  
+		  
+		  function intertionSort(arr){
+			  var len = arr.length;
+			  var handle = [];
+			  handle.push(arr[0]);
+			  for(i = 1; i < len; i++ ){
+				  var newNum = arr[i];
+				  for(j = handle.length - 1; j >=0; j--){
+					 var newHandle = handle[j]
+						  if(newNum > newHandle){
+							  handle.splice(j + 1,0,newNum);
+							  break;
+						  }
+						  if(j ==0){
+							   handle.unshift(newNum);
+						  }
+				  }
+			  }
+			  return handle;
+		  }
+		  var arr = [3,4,7,2,9];
+		  alert(intertionSort(arr));
+		  
+		  
+		  function quickSort(arr){
+			  if(arr.length < 2){
+				  return arr;
+			  }
+			 var middleIndex = Math.floor(arr.length /2);
+			 var middleValue = arr.splice(middleIndex,1);
+			 var leftArr = [];
+			 var rightArr = [];
+			 for(i = 0; i < arr.length; i++){
+				  arr[i] <= middleValue ? leftArr.push(arr[i]) : rightArr.push(arr[i]);
+			  }
+			  return quickSort(leftArr).concat(middleValue,quickSort(rightArr));
+		  }
+		  var arr = [3,4,7,2,9];
+		  alert(quickSort(arr));
+
+			var arr = [3,4,7,2,9];
+			var num = 2;
+			var result = arr.slice(2,3);
+			alert(result);
+	 	
+			function mergeSort(arr){
+				if(arr.length < 2){
+					return arr;
+				}
+				var middle = Math.floor(arr.length / 2);
+				var left = arr.slice(0,middle);
+				var right = arr.slice(middle);
+				return merge(mergeSort(left),mergeSort(right));
+			}
+			function merge(left,right){
+				var result = [];
+				while (left.length && right.length){
+					if(left[0] <= right[0]){
+						result.push(left.shift());
+					}else{
+						result.push(right.shift());
+					}
+				}
+				while(left.length){
+					result.push(left.shift());
+				}
+				while(right.length){
+					result.push(right.shift());
+				}
+				return result;
+			}
+			var arr = [3,4,7,2,9];
+			alert(mergeSort(arr));
+			
+		   
+		   function mergeSort(arr){
+			   if(arr.length < 2){
+				   return arr;
+			   }
+			   var middle = Math.floor(arr.length / 2);
+			   var left = arr.slice(0,middle);
+			   var right = arr.slice(middle);
+			   return merge(mergeSort(left),mergeSort(right));
+		   }
+		   function merge(left,right){
+			   result = [];
+			   while(left.length && right.length){
+				   if(left[0] < right[0]){
+					   result.push(left.shift());
+				   }else{
+					   result.push(right.shift());
+				   }
+			   }
+			   while(left.length){
+				   result.push(left.shift());
+			   }
+			   while(right.length){
+					result.push(right.shift());
+			   }
+			   return result;
+		   }
+			var arr = [3,4,7,2,9];
+			alert(mergeSort(arr));
+			
+			
+			function countingSort(arr,maxValue,minValue){
+				var bucket = new Array(maxValue - minValue + 1);
+				var arrLen = arr.length;
+				var sortedIndex = 0;
+				var bucketLen = (maxValue - minValue + 1);
+				for(i = 0; i < arrLen; i++){
+					if(!bucket[arr[i]]){
+						bucket[arr[i]] = 0;
+					}
+					bucket[arr[i]]++;
+					
+				}
+				for (var j = 0; j < bucketLen; j++){
+					while(bucket[j] > 0){
+						arr[sortedIndex++] = j;
+						bucket[j]--;
+					}
+				}
+				return arr;
+			}
+			var arr = [2,5,4,6,28,23];
+			var maxValue = arr[0];
+			var minValue = arr[0];
+			for(i = 1; i < arr.length; i++){
+				if(arr[i] < minValue){
+					minValue = arr[i];
+					
+				}else if(arr[i] > maxValue){
+					maxValue = arr[i]
+				}
+			}
+			document.write(countingSort(arr,maxValue,minValue));
+			*/	
+			
+			function buildMaxSort(arr){
+				for(i = Math.floor(arr.length / 2); i >= 0; i--){
+					heapify(arr,i);
+				}
+			}
+			function heapify(arr,i){
+				var left = 2 * i + 1;
+				var right = 2 * i + 2;
+				var largest = i;
+				if(left < arr.length && arr[left] > arr[largest]){
+					largest = left;
+				}
+				if(right < arr.length && arr[right] > arr[largest]){
+					largest = right;
+				}
+				if(largest != i){
+					swap(arr,i,largest);
+					heapify(arr,largest);
+				}
+			}
+			function swap(arr,i,j){
+				var temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+			}
+			function heapSort(arr){
+				buildMaxSort(arr);
+				for(i = arr.length -1;i > 0; i--){
+					swap(arr,0,i);
+					arr.length--;
+					heapify(arr,0);
+				}
+				return arr;
+			}
+			var arr = [7,3,25,2,6,23,5];
+			document.write(heapSort(arr));
+			
+		</script>
+	</body>
+</html>

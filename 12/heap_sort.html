@@ -181,10 +181,10 @@
 		document.write(heapSort(arr));
 		*/
 		
-		var len;
+		
 		function buildMaxHeap(arr){
 			len = arr.length;
-			for(i = Math.floor(len /2); i >= 0; i--){
+			for(i = Math.floor(arr.length /2); i >= 0; i--){
 				heapify(arr,i);
 			}
 		}

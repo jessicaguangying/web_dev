@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+		
+		/*
+		function averageArr(arr){
+			var len = arr.length;
+			var sum = 0;
+			for(var i = 0; i < len; i++){
+				sum += arr[i];
+			}
+			return sum / len;
+		}
+		var arr = [5,2,6,13,9,30];
+		var result = (averageArr(arr));
+		document.write(result);
+		*/
+		
+		
+		
+		function maxArr(arr){
+			var len = arr.length;
+			var maxValue = arr[0];
+			for(var i = 0; i < len; i++){
+				if(arr[i] > maxValue){
+					maxValue = arr[i];
+				}
+			}
+			return maxValue;
+		}
+		var arr = [5,2,3,13,9,30];
+		var result = (maxArr(arr));
+		document.write(result + "<br/>");
+		
+				
+		function minArr(arr){
+			var len = arr.length;
+			var minValue = arr[0];
+			for(var i = 0; i < len; i++){
+				if(arr[i] < minValue){
+					minValue = arr[i]
+				}
+			}
+			return minValue;
+		}
+		var arr = [5,2,3,13,9,30];
+		var result = (minArr(arr));
+		document.write(result);
+		
+		
+		
+		</script>
+	</body>
+</html>
