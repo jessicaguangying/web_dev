@@ -167,7 +167,7 @@
 				water += 5;
 				}
 			document.write(count); 
-			  */
+			  
 			
 			var i = 1000;
 			while(i < 10000){
@@ -182,6 +182,94 @@
 			}
 			 
 			 
+			 class Person{
+				 constructor(name,age,sex) {
+				     this.name = name;
+					 this.age = age;
+					 this.sex = sex;
+				 }
+				 showSelf(){
+					 alert('我叫${this.name}今年${this.age}是个${this.sex}孩');
+				 }
+			 }
+			 var p1 = new Person("blue","18","男");
+			 p1.showSelf();
+			 
+			 
+			 class House{
+				 constructor(name,location,housearea){
+					 this.name = name;
+					 this.location = location;
+					 this.housearea = housearea; 
+				 }
+				 show(){
+					 console.log(`我们的家叫${this.name},位于${this.location},面积${this.housearea}平方米`)
+				 }
+			 }
+			 var h1 = new House('龙凤寨','悉尼情人港',500);
+			 h1.show()
+			 
+			 
+			
+			class animal{
+				constructor(name,nationality,nickname){
+					this.name = name;
+					this.nationality = nationality;
+					this.nickname = nickname;
+				}
+				show(){
+					console.log(`这只小${this.name}来自${this.nationality},大家可以叫它${this.nickname}`)
+				}
+			}
+			 var A1 = new animal("袋鼠","澳大利亚","小龙")
+			 A1.show();
+			 
+			 class age extends animal{
+				 constructor(name,nationality,nickname,age) {
+				     super(name,nationality,nickname);
+					 this.age = age;
+				 }
+				 showAge(){
+					console.log(`它已经${this.age}岁了。`) 
+				 }
+			 }
+			 var A2 = new age("袋鼠","澳大利亚","小龙",1)
+			 A2.show();
+			 A2.showAge();
+			
+			
+			var arr = [1,4,6,6,7,8,9];
+			var i = 0;
+			var length = arr.length;
+			for(j = 1; j < length; j++){
+				if(arr[i] != arr[j]){
+				
+					
+
+				}
+			}
+			
+			alert(arr);
+		 */	
+		var romanToInt = function(CCI) {
+		    var I = 1;
+		    var V = 5;
+		    var X = 10;
+		    var L = 50;
+		    var C = 100;
+		    var D = 500;
+		    var M = 1000;
+		    var result = 0;
+		    for(i = 0; i < s.length; i++){
+		        result += s[i];
+		        if(I + V){
+		            result = I + V - 1 ;
+		        }
+		    }
+			return result;
+		};	
+		alert(result);
+			
 		</script>
 	</body>
 </html>

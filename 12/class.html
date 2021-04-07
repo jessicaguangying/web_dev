@@ -1,0 +1,87 @@
+<!DOCTPYE html>
+<html lang="en">
+<head>
+	<meta charset="utf=8">
+	<title></title>
+	<style>
+		div{width:100px; height:100px; border:1px solid black;}
+	</style>
+</head>
+<body>
+	<script>
+
+		/*	
+		function Person(name,sex,age){
+		//属性
+			this.name = name;
+			this.sex = sex;
+			this.age = age;
+		}
+		//方法
+		Person.prototype.showSelf = function(){
+			alert('我叫' + this.name + '是个' + this.sex + '孩' + '今年' + this.age + '岁');
+		}
+		Person.prototype.say = function(){
+			alert(this.name + "===" + this.age);
+		}
+		var p1 = new Person("blue","男",18);
+		p1.showSelf();
+		
+		//白领
+		function Worker(name,sex,age,job){
+		 // 1、构造函数的伪类--- 继承父级的属性
+			Person.call(this,name,sex,age);
+			this.job = job;
+		}
+		//2、原型链   继承父一级的方法
+		//<1>通过for...in 遍历继承
+		//for(var funcName in Person.prototype){
+		//	Worker.prototype[funcName] = Person.prototype[funcName];
+		//}
+		//<2> Object.create()
+		//Worker.prototype = Object.create(Person.prototype);
+		//<3> 调用构造函数继承
+		Worker.prototype = new Person();
+		Worker.prototype.showJob =  function(){
+			alert("我的工作是" + this.job);
+		}
+		var w1 = new Worker("小米","男","20","程序员");
+		w1.showSelf();
+		w1.showJob();
+		
+		*/
+		
+		class Person{
+		//构造器
+			constructor(name,sex,age){
+				this.name = name;
+				this.sex = sex;
+				this.age = age;
+			}
+			showSelf(){
+				alert('我叫' + this.name + '是个' + this.sex + '孩' + '今年' + this.age + '岁');
+			}
+		}
+		
+		var p1 = new Person("blue","男",18);
+		p1.showSelf();
+		
+		//extends继承
+		class Worker extends Person{
+			constructor(name,sex,age,job){
+			//1.继承父一级的属性
+				super(name,sex,age);
+				this.job = job
+			}
+			showJob(){
+				alert("我的工作是" + this.job);
+			}
+		}
+		var w1 = new Worker("小米","男","20","程序员");
+		w1.showSelf();
+		w1.showJob();
+		
+	
+	</script>
+</body>
+<html>

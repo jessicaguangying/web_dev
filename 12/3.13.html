@@ -1,0 +1,247 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<mate charset="utf-8">
+		<title>123</title>
+		<style>
+			div{width:100px; height:100px;border:1px black solid;}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			//s
+			/*
+				var arr = [7,2,3];
+				var result = arr.splice(0,1,10)	
+				alert(arr);
+				alert(result);	
+			
+			
+			var arr = [7,2,1]	
+			var tmp = arr[arr.length - 1];
+				for(i = arr.length - 1; i > 0; i--){
+					arr[i] = arr[i - 1];
+					console.log("i值" + i + "arr值" + arr)
+				}
+				
+				arr[0] = tmp;
+			    console.log(arr)      172
+				
+			
+			var arr = [7,2,1]	
+			var tmp = arr[arr.length - 1];
+				for(i = 1; i < arr.length; i++){
+					arr[i] = arr[i - 1];
+					console.log("i值" + i + "arr值" + arr)
+				}
+				
+				arr[0] = tmp;
+			    console.log(arr)
+				
+		
+				var arr = [7,2,3];
+				var res = [];
+				res.unshift(7);
+				alert(res);
+	
+			*/	
+			
+			
+	/*	
+			var num = 36;
+			console.log(num.toString(2));
+			var result = "";
+			function erjinz(num){
+				if(num == 0){
+					return 0;
+				}
+				while(num != 0){
+					result = num % 2 + result;
+					console.log(result);
+					num =  parseInt(num / 2);
+					console.log(num);
+					//num % 2 == 0 ? num = 0 : num = 1;
+					//num > 0 ? num = 0 : num = 1;
+					//result = num.toString(2);
+					//return result;
+				}
+				return result;
+			}
+			console.log(erjinz(num));
+			
+			function counting(num){
+				erjinz(num);
+				console.log(num);
+				num = num.toFixed();
+				var arr = num.split('');
+				    console.log(arr);
+				for(i = 0 ; i < arr.length; i++){
+					var sum = "";
+					if(arr[i] == 0){
+					     sum += 1;
+						//result = num.slice(i,2);	
+					}
+					console.log(sum);
+				}
+				return sum;
+			}
+			console.log(counting(num));
+			
+			
+			
+			var q = 100.00;
+			q = q.toFixed();
+			var str = q.split('')
+			console.log(str);
+		*/
+			
+		function maxGap(num){
+			var arr = num.split(""); 
+			console.log(arr);
+			var start = false;//有没有碰到过“1”
+			var sum = 0;
+			var max = 0;
+			for(i = arr.length - 1; i >= 0; i--){
+				if(arr[i] == "1"){//碰到“1”
+				    if(start == true) {//已经碰到过“1”
+					    if(max < sum){//更新max
+						    max = sum;
+						}
+						sum = 0;
+					} else {//第一次
+					    start = true;
+					}
+				} else {// arr[i] is "0"
+				    if(start == true) {//之前碰到过“1”
+					    sum++;//0的长度累加
+					}
+				}
+			}
+			console.log('0的个数' + max);
+		}
+		maxGap("111000110000111100000");
+			
+				
+			/*
+		
+			var num = "1110034873";
+			var arr = num.split(""); 
+			console.log(arr);
+			for(i = 0; i < arr.length; i++){
+				if(arr[i] == 1){
+					arr.slice(i,arr.length);
+					alert(arr);
+					break;
+				}
+			}
+			alert(arr.join(""));
+			
+			
+			/*
+			var result = arr.slice(2,5);
+			alert(arr);              // h,o,w, ,a,r,e, ,a,r,e, ,y,o,u
+			alert(num);
+			alert(result);
+			
+			
+				/*
+			var result = [];
+				result = 0 + result;
+				result = 1 + result;
+				alert(result + "2");
+			
+			
+			var num = 1000;
+			function erjinz(num){
+				if(num == 0){
+					return 0;
+				}
+				while(num != 0){
+					parseInt(num,2);
+					return num;
+				}
+				return num;
+			}
+			alert(erjinz(num));
+			
+	
+			/*
+			function erjinzhi(num){
+				if(num == 0){
+					
+				}
+			}
+		   
+			
+			var num = 60;
+			alert(num % 8);
+			
+			//var result = 0;
+			//result = num % 2 //+ result;
+			//console.log(result);
+			
+			
+			var num = 5;
+            alert(num % 2)
+			 */
+			
+			/*
+			var num = -3;
+				num % 2 == 0 ? num = 0 : num = 1;
+			alert(num);
+			//	num > 0 ? num = 0 : num = 1;
+			alert(num);
+		
+			
+			
+			var num = 16;
+			alert(num.toString(2)); //10000 
+			var num1 = 8;
+			alert(num1.toString(2)); //1000
+			
+			
+		
+			/*
+			var num = 6;
+			if(num > 3){
+				num = 0;
+				console.log(num);
+			}else{
+				num = 1;
+				console.log(num);
+			}
+			console.log(num);
+
+
+
+			789655
+
+			var num = 100;
+			console.log(num.toString(2));
+		
+		
+			var str = "abce123";
+			var arr = str.split("")
+			console.log(arr);
+			var result = "";
+			for(i = 0; i < arr.length; i++){
+			console.log(i + arr[i]);
+				if(arr[i] > 0 || arr[i] < 10){
+					result = "turn";
+				}else{
+					result = "false";
+				}
+			}
+			alert(result);
+			
+			
+			function matchesPatternmatchesPattern(str){
+				return (/^\d{3}\-\d{3}\-\d{4}$/).test(str);
+			}
+			var str = '800-555-1212'
+			alert(matchesPattern(str));
+		*/
+		</script>
+	</body>
+</html>

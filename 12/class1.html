@@ -1,0 +1,39 @@
+<!DOCTPYE html>
+<html lang="en">
+<head>
+	<meta charset="utf=8">
+	<title></title>
+	<style>
+		div{width:100px; height:100px; border:1px solid black;position:absoult;}
+	</style>
+	<script>
+	
+	
+		window.onload = function(){
+			var oDiv = document.getElementById("div1");
+			oDiv.onmousedown = function(ev){
+				var e = ev || window.event;
+				//alert(e.offsetX + "," + e.offsetY);
+				var offsetX = e.clentX - oDiv.offsetLeft;
+				var offsetY = e.clentY - oDiv.offsetTop;
+				
+				document.onmousemove = function(ev){
+					var e = ev || window.event;
+					oDiv.style.left = e.clientX - offsetX + 'px';
+					oDiv.style.right = e.clientY - offsetY + 'px';
+				}
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null;
+			}
+		}
+	
+		
+	</script>
+	
+	
+</head>
+<body>
+	<div id = "div1"></div>
+</body>
+<html>
