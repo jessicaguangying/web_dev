@@ -17,6 +17,19 @@ git log: show commits in local repo
 git branch: show current branch    分支     *main
 git push origin main:   
 
+gitee上新建库后
+Git Bash 上增加对应的commit地址  git remote add  ***(名称，用于push时 ***) 克隆SSH地址
+git remote -v /-vv   看所有仓库地址
+
+修改远程commit 信息
+1、git commit --amend       进入修改成想更新的信息      ：wq  退出（write quit    如:q! 是强制退出） ，git push origin main -f
+添加、删除、查看远程地址
+1、git remote add origin https://gitee.com/kingCould/HelloWord.git
+2、git remote remove origin  即可删除
+3、git remote -v
+
+克隆远程文件
+git clone  克隆SSH地址
 
 1\版本控制，版本迭代     新版本 老版本   版本管理   可以恢复以前版本
 多人开发就必须使用版本控制，

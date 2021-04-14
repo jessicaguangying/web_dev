@@ -58,7 +58,7 @@
 	var nums = [2,4,5,8,9];
 	var target = 10;
 	alert(twoSum(nums,target));   //0,3
-	*//*
+	
 	function twoSum(nums,target){
 		var d = {};
 		for(var i = 0; i < nums.length; i++){
@@ -78,6 +78,7 @@
 	
 	var reverse = function(x){
 		var x = x.toString();
+		console.log(x);  //123
 		var arr = x.split("");
 		if(arr[0] != '-'){
 			var y = Number(arr.reverse().join(''));
@@ -99,6 +100,28 @@
 	var x = [123];
 	alert(reverse(x));  //321
 	
+	*//*
+		var x = [123];
+		//var x = x.toString();
+		//console.log(x);  //123
+		//var y = x.toString(2);
+		//console.log(y);  //123
+		//var y = x.toString("2");
+		//console.log(y); //123
+		//var x = 123;
+		//var y = x.toString("2");
+		//console.log(y); //1111011
+		//var x = 123;
+		//var y = x.toString(2);
+		//console.log(y); //1111011
+	
+		//var x = "123";
+		//var y = x.toString(2);
+		//console.log(y); //123
+		//var y = x.toString();
+		//console.log(y); //123
+		var num = Math.pow(2,3);
+		console.log(num); //8   2的3次方
 	
 	var reverse = function(x){
 		var x = x.toString();
@@ -140,6 +163,22 @@
 	alert(removeDuplicates(nums));    
 	
 	
+	var removeDuplicates = function(nums){
+		var newNum = nums.sort();
+		console.log(newNum);
+		for(i = 0; i < newNum.length; i++){
+			if(newNum[i] == newNum[i + 1]){
+				newNum.splice(i,1);  
+			}
+		}
+		return newNum;
+	};
+	var nums = [1,2,1,4];
+	console.log(removeDuplicates(nums));     //1,2,4
+	
+	var arr = [3,1,2];
+	var newArr = arr.sort();
+	alert(newArr);
 	
 	
 	//4.只出现一次的元素
@@ -180,10 +219,11 @@
 	}
 	var nums = [1,2,4,1,2];
 	alert(singleNumer(nums)); 
-	
+	*//*
 	var arr = [1,2,4,1,2,7];
-	//alert(arr.indexOf(arr[0]));     //0,1,2,0,1,
-	//alert(arr.lastIndexOf(arr[0])); //3,4,2,3,4,
+	console.log(arr.indexOf(arr[0]));     //0   //0,1,2,0,1,5
+	console.log(arr.lastIndexOf(arr[0])); //3   //3,4,2,3,4,5
+	
 	
 	alert(0^arr[0])  //1    0 1  +
 	alert(1^arr[1]) //3     1 2  +
@@ -265,6 +305,24 @@
 		return digits;
 	}
 	console.log(lastAdd1([4,3,2,5]));     //4,3,2,6
+	
+	var arr = [3,4,2,5,8]
+	var newArr = arr[2];
+	console.log(newArr);  //2
+	console.log(newArr++);  //2
+	console.log(newArr--);  //3
+	console.log(++newArr); //3
+	console.log(--newArr);  //2
+	
+	var arr = [3,4,2,5,8]
+	for(var i = 0; i < arr.length; i++){
+		var newArr = arr[2];
+		console.log(newArr);  //2
+		console.log(newArr++);  //2
+		console.log(newArr--);  //3
+		console.log(++newArr);  //3
+		console.log(--newArr);  //2
+	}
 	*/
 	/*
 	//7.各位相加    
@@ -324,7 +382,7 @@
 		if(num % 9 == 0){
 			return 9;
 		}else{
-			return num % 9;
+			return num % 9;  //小数点后1位
 		}
 	}
 	console.log(addDigits(43));
@@ -555,6 +613,7 @@
 	};
 	console.log(addBinary(11,1));
 	
+	
 	//13.罗马数字转整数
 	
 	function romanTOInt(s){
@@ -597,7 +656,7 @@
 					}else{
 						res += 100;
 					}
-					flag = 0;
+					flag = 3;
 					break;	
 				case 'D':
 					if(flag == 3){
@@ -619,7 +678,8 @@
 		}
 		return res;
 	}
-	console.log(romanTOInt('IVM')); //1004
+	console.log(romanTOInt('ICM')); //901
+	
 	
 	
 	function romanToInt(s){
@@ -659,8 +719,8 @@
 	var b = [1,2,3,3];
 	var newA1 = a.join('');
 	var newA2 = b.join('');
-	var newAone = parseInt(newA1);
-	var newAtwo = parseInt(newA2);
+	var newAone = parseInt(newA1);   //   parseInt()	解析一个字符串并返回一个整数。
+	var newAtwo = parseInt(newA2);  //
 	var sum = newAone + newAtwo
 	alert(newA1 + newA2);    //35241233
 	alert(sum);    //4757
@@ -671,10 +731,25 @@
 
 	
 	var a = 4757;
-	var res = a.toString();   
+	var res = a.toString();    //整数返回字符
 	alert(res);  //4757
 	var sum = res.split('');
 	alert(sum); //4,7,5,7
+	
+	var a = 4757;
+	var sum = a.split("");   //错误，因为整数不能分开
+	alert(sum);
+	
+	var str = "4757";
+	var sum = str.split('');   
+	alert(sum);    //4,7,5,7
+	
+	var str = [4,757];
+	var sum = str.join('');   
+	alert(sum);  //4757
+	*/
+	
+	/*
 	
 	???function addTwoNums(I1,I2){
 		var result;
@@ -935,7 +1010,7 @@
 	}
 	console.log(missingNumber([45,35,38,13,12,23,48,15,44,21,43,26,6,37,1,19,22,3,11,32,4,16,28,49,29,36,33,8,9,39,46,17,41,7,2,5,27,20,40,34,30,25,47,0,31,42,24,10,14]));    //18
 	*/
-	/**/
+	/*
 	function missingNumber(nums){
 		var sum = 0;
         for (var i = 1; i <= nums.length; i++) {
@@ -985,10 +1060,577 @@
 	console.log(wordPattern('abba','dog cat cat dog')); //true
 	
 	
+	//21.数单词
+	
+	function countSegments(s){
+		var sum = 0;
+		for(var i = 0; i < s.length; i++){
+			if( i == ',' || i == 0 || s.charAt(i - 1) == " " && s.charAt(i) != " "){
+				sum += 1;   //sum++
+				console.log(i == 0)
+			}
+		}
+		return sum;
+	}
+	var s = "hello,my name is Jess"
+	console.log(countSegments(s));    //4  ,没计算逗号
+	 
+	//22.删除排序链表中的重复元素
+	function deleteDuplicates(head){
+		var arr = head.sort(function(value1,value2){
+			return value1 - value2;
+		});
+		var newStr = [];
+		for(var i = 0; i < arr.length;i++){
+			if(arr[i] == arr[i + 1]){
+				newStr.splice(i,1);
+			}else(
+				newStr.push(arr[i])
+			)
+		}
+		return newStr;
+	}
+	var head = [1,4,2,6,2,5,4];
+	console.log(deleteDuplicates(head));   //1,2,4,5,6
+	
+	var deleteDuplicates = function (head){
+		if (!head){
+			return head;
+		}
+		var cur = head;
+		while(cur.next && cur.val === cur.next.val) {
+			cur = cur.next
+		}
+	head.next = deleteDuplicates(cur.next)
+	return head
+	};
+	var head = [1,4,2,6,2,5,4];	
+	console.log(deleteDuplicates(head));   //1,4,2,6,2,5,4
+	
+	
+	var deleteDuplicates = function(head) {
+		if (!head) {
+			return head;
+		}
+
+		let cur = head;
+		while (cur.next) {
+			if (cur.val === cur.next.val) {
+				cur.next = cur.next.next;
+			} else {
+				cur = cur.next;
+			}
+		}
+		return head;
+	};
+	var head = [1,4,2,6,2,5,4];	
+	console.log(deleteDuplicates(head)); //1,4,2,6,2,5,4
+   
+	//23. 合同两个有序链表
+	function mergeTwoLists(I1,I2){
+		var left = I1.sort();
+		var right = I2.sort();
+		var result = [];
+		while(left.length && right.length){
+			if(left[0] < right[0]){
+				result.push(left.shift());
+			}else{
+				result.push(right.shift())
+			}
+		}
+		while(left.length){
+			result.push(left.shift());
+		}
+		while(right.length){
+			result.push(right.shift());
+		}
+		return result;
+	}
+	console.log(mergeTwoLists([1,2,4],[1,3,4]));  //1,1,2,3,4,4
+	 
+	var mergeTwoLists = function(l1, l2) {
+		if (l1 === null) {
+			return l2;
+		} else if (l2 === null) {
+			return l1;
+		} else if (l1.val < l2.val) {
+			l1.next = mergeTwoLists(l1.next, l2);
+			return l1;
+		} else {
+			l2.next = mergeTwoLists(l1, l2.next);
+			return l2;
+		}
+    };
+	console.log(mergeTwoLists([1,2,4],[1,3,4]));     //val 不能执行
+
+	
+	var mergeTwoLists = function(l1, l2) {
+    const prehead = new ListNode(-1);
+
+    let prev = prehead;
+    while (l1 != null && l2 != null) {
+        if (l1.val <= l2.val) {
+            prev.next = l1;
+            l1 = l1.next;
+        } else {
+            prev.next = l2;
+            l2 = l2.next;
+        }
+        prev = prev.next;
+    }
+
+    // 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可
+    prev.next = l1 === null ? l2 : l1;
+
+    return prehead.next;
+	};
+
+	
+	//24.最后一个单词的长度
+	function lengthOfLastWord(s){
+		var end = s.length -1;
+		while(end >= 0 && s[end] == ' '){
+			end--;
+		}
+		if(end < 0){
+			return 0;
+		}
+		var start = end;
+		while(start >= 0 && s[start] == ' '){
+			return end - start;
+		}
+	}
+	var s = "Hello world";
+	console.log(lengthOfLastWord(s));
+	
+	var s =  "Hello world";
+	for(var i = 0; i < s.length; i++){
+		console.log(s.length); //11
+		console.log(s[i]);     //H  e  l  l  o   w  o  r  l  d
+	}
+	
+	function lengthOfLastWord(s){
+		var end = s.length -1;
+		var sum = [];
+		for(var i = end; i >= 0;i--){
+			sum.push(s[i])
+			console.log(sum);
+			if(s[i] == " " || s[i] >= "A" && s[i] <= "Z"){
+				break
+			}
+		}
+	return sum.length -1;
+	}
+	var s = "Hello world";
+	console.log(lengthOfLastWord(s));     //5
+	
+	*//*
+	//25.最大数
+	function largestNumber(nums){
+		var newNums = nums.sort();
+		var newNum = newNums.reverse();
+		var result = newNum.join("");
+		return result;
+	}
+	var nums = [210,7,32];
+	console.log(largestNumber(nums));  //732210
+	
+	
+    var nums = [210,7,32];
+	var newNum = nums.sort();
+	console.log(newNum);
+	var newNums = newNum.reverse();
+	console.log(newNums);
+	var result = newNums.join("");
+	console.log(result);
+	
+	var largestNumber = function(nums) {
+		nums.sort((x, y) => {
+			let sx = 10, sy = 10;
+			while (sx <= x) {
+				sx *= 10;
+			}
+			while (sy <= y) {
+				sy *= 10;
+			}
+			return '' + (sx * y + x) - ('' + (sy * x + y));
+		})
+		if (nums[0] === 0) {
+			return '0';
+		}
+		return nums.join('');
+    };
+	var nums = [210,7,32];
+	console.log(largestNumber(nums));
+	
+	*//*
+	//26.快乐数   ???无JS解法
+	function isHappy(n){
+		var sum = [];
+		for(var i = 0; i < n.length; i++){
+			sum += sum.sort(sum[i],2)
+		}
+		return isHappy(n)
+	}
+	var n = 34;
+	console.log(isHappy(n));
+	
+	
+	var  n = 1345;
+	var num = n.toString();
+	var sum = 0
+	for(var i = 0; i < num.length; i++){
+			sum += (num[i] * num[i])
+			console.log(sum)    //1,10,26,51
+		}
+		
+	
+	//27.寻找两个正序数组的中位数
+	
+	function resultMiddle(result){
+		var middle = result.length % 2
+		var middleIndex = parseInt(result.length / 2);
+		if(middle == 0){
+			return (result[middleIndex] + result[middleIndex - 1]) / 2;
+		}
+		if(middle != 0){
+			return (result[middleIndex]);
+		}
+	}
+	
+	function findMedianSorteArrays(num1,num2){
+		var left = num1;
+		var right = num2;
+		var result = [];
+		while(left.length && right.length){
+			if(left[0] < right[0]){
+				result.push(left.shift());
+			}else{
+				result.push(right.shift());
+			}
+		}
+		while(left.length){
+			result.push(left.shift());
+		}
+		while(right.length){
+			result.push(right.shift());
+		}
+		return resultMiddle(result);      //result  1,2,3,4,6,7  
+	}
+	var num1 = [1,3,6]
+	var num2 = [2,4,7]
+	console.log(findMedianSorteArrays(num1,num2));  //3.5
+	
+	//var num = 9;
+	//console.log(num % 3);   //0
+	//console.log(parseInt(num / 2));  //4
+	
+	
+	//28. 电话号码的字母组合   ??? 不对
+	function letterCombinations(digits){
+		var 2 = [a,b,c];
+		var 3 = [d,e,f];
+		var 4 = [g,h,i];
+		var 5 = [j,k,l];
+		var 6 = [m,n,o];
+		var 7 = [p,q,r,s];
+		var 8 = [t,u,v];
+		var 9 = [w,x,y,z];
+		var newDigits = digits.split(",");
+		if(newDigits.length == 0){
+			return digits;
+		}
+		if(newDigits.length >= 1){
+			var result = [];
+			for(var i = 0; i <= newDigits.length;i++){
+				for(var j = 0; j <= newDigits.length;j++ ){
+					result.push(newDigits[i] * newDigits[j])
+				}
+			}
+		}
+		return result;
+	}
+	var digits = [23];
+	console.log(letterCombinations(digits));
+
+	
+	//29. 搜索插入位置
+	
+	function searchInsert(nums,target){
+		for(var i = nums.length - 1; i >= 0;i--){
+			if(nums[i] == target){
+				return i;
+			}
+			if(nums[i] != target){
+				if(target < nums[i]){   //target > nums[i]  return i + 1;
+					return i;
+				}
+			}
+		}
+	}
+	var nums = [1,2,5,7,9];
+	var target = [8];     //7 是3， 8是4
+	console.log(searchInsert(nums,target));
+	
+	var searchInsert = function(nums, target){
+		const n = nums.length;
+		let left = 0, right = n;
+		while(left < right){
+			let mid = left + right / 2;
+			if(nums[mid] >= target){
+				right = mid;
+			}else{
+				left = mid + 1;
+			}
+		}
+		return left;
+	};
+	var nums = [1,2,5,7,9];
+	var target = [8];     //????  7
+	console.log(searchInsert(nums,target));
+	
+	var searchInsert = function(nums, target){
+		const n = nums.length;
+		let left = 0, right = n - 1;
+		while(left <= right){
+			let mid = left + (right - 1) / 2;
+			if(nums[mid] < target){
+				left = mid + 1;
+			}else{
+				left = mid - 1;
+			}
+		}
+		return left;
+	};
+	var nums = [1,2,5,7,9];
+	var target = [8];     //????  4.5
+	console.log(searchInsert(nums,target));
+	
+	var searchInsert = function(nums, target){
+		const n = nums.length;
+		let left = 0, right = n - 1, ans = n;
+		while (left <= right) {
+			let mid = ((right - left) >> 1) + left;
+			if (target <= nums[mid]) {
+				ans = mid;
+				right = mid - 1;
+			} else {
+				left = mid + 1;
+			}
+		}
+		return ans;
+	};
+	var nums = [1,2,5,7,9];
+	var target = [8];     //  4
+	console.log(searchInsert(nums,target));
+	
+	//30. 搜索插入位置
+	
+	function isSameTree(p,q){
+        if (p == null && q == null){
+            return true;
+        } else if (p == null || q == null){
+            return false;
+        } else if (p.val != q.val){
+            return false;
+        } else {
+            return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        }
+    }
+	var p = [1,2,3];
+	var q = [1,2,3];
+	console.log(isSameTree(p,q));   //ture
+	
+	//31. 计数质数
+
+	//32. 丑数    丑数 就是只包含质因数 2、3 和/或 5 的正整数。
+	function isUgly(n){
+		if(n == 1 || n == 2 || n == 3 || n == 5){
+			return true;
+		}
+		if(n <= 0){
+			return false;
+		}
+		var newN = n / 2;
+		var newN2 = n / 3;
+		var newN3 = n / 7;
+		while(n >= 2){
+			if(n % 2 == 0 && newN % 2 == 0 || n % 5 == 0){
+				return true;
+			}else if(n % 2 == 0 && n % 3 == 0 || n % 5 == 0){
+				return true;
+			}else if(n % 3 == 0 && newN2 % 3 == 0 || n % 5 == 0){
+				return true;
+			}else if(n % 2 == 0 &&  n % 5 == 0){
+				return true;
+			}else if(n % 3 == 0 &&  n % 5 == 0){
+				return true;
+			}else if(n % 7 == 0 ||  newN3 % 7 == 0){   //质数
+				return false;
+			}else{
+				return false;
+			}
+		}
+	}
+	var n = 14;
+	console.log(isUgly(n));    
+		
+		
+	function isUgly(n){
+		if (n <= 0) {
+        return false;
+    }
+    var factors = [2, 3, 5];
+    for (var factor of factors) {    //number of factors  for循环的of   2,3,5
+        while (n % factor === 0) {
+            n /= factor;
+        }
+    }
+    return n == 1;
+	}
+	var n = 3;
+	console.log(isUgly(n)); 
+
+
+	//33.有效的字母异位词
+	function isAnagram(s,t){
+		var newS = s.split("");
+		var newT = t.split("");
+		console.log(newT);   // ["n", "a", "g", "a", "r", "a", "s"]
+		var newSort = newS.sort();
+		var newTort = newT.sort();
+		console.log(newTort);     // ["a", "a", "a", "g", "n", "r", "s"]
+		if(newSort.length != newTort.length){
+			return false;
+		}
+		var result = [];
+		if(newSort.length == newTort.length){
+			var newSjoin = newSort.join("");
+			var newTjoin = newTort.join("");
+			if(newSjoin === newTjoin){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+	var s = "anagram";
+	var t = "nagaras";
+	console.log(isAnagram(s,t));  //false    
+	
+	*/
+	/*
+	var s = "anagram word";
+	var newS = s.split("");  ["a", "n", "a", "g", "r", "a", "m", " ", "w", "o", "r", "d"]
+	var newS1 = s.split(" ")   ["anagram", "word"]
+	console.log(newS)
+	console.log(newS1)
+	
+	
+	var isAnagram = function(s, t) {
+			return s.length == t.length && [...s].sort().join('') === [...t].sort().join('')
+		};
+		var s = "anagram";
+		var t = "nagara";
+		console.log(isAnagram(s,t));   //false
+		
+	var isAnagram = function(s, t) {
+		if (s.length !== t.length) {
+			return false;
+		}
+		const table = new Array(26).fill(0);
+		for (let i = 0; i < s.length; ++i) {
+			table[s.codePointAt(i) - 'a'.codePointAt(0)]++;
+		}
+		for (let i = 0; i < t.length; ++i) {
+			table[t.codePointAt(i) - 'a'.codePointAt(0)]--;
+			if (table[t.codePointAt(i) - 'a'.codePointAt(0)] < 0) {
+				return false;
+			}
+		}
+		return true;
+	};
+
+	var s = "anagram";
+	var t = "nagaras";
+	console.log(isAnagram(s,t));   //false;
+   
+	
+	var isAnagram = function(s, t) {      //此法不可用
+		sort(s.begin(),s.end());
+		sort(t.begin(),t.end());
+		return s == t;
+	};
+	var s = "anagram";
+	var t = "nagaras";
+	console.log(isAnagram(s,t));
+	
+	 
+	 //34.3的幂
+	 function isPowerOfThree(n){
+		if(n < 1){
+            return false
+		}
+        while(n % 3 == 0){
+            n /= 3;
+        }
+		return n == 1;
+	 }
+	 var n = 9;
+	 console.log(isPowerOfThree(n));  //true
+	
+	//35.4的幂
+	 function isPowerOfFour(n){
+		if(n < 1){
+            return false
+		}
+        while(n % 4 == 0){
+            n /= 4;
+        }
+		return n == 1;
+	 }
+	 var n = 16;
+	 console.log(isPowerOfFour(n));
+	 */
+	 //36.  找不同    ///错误
+	 var findTheDifference = function(s, t) {
+		const cnt = new Array(26).fill(0);
+		for (const ch of s) {
+			cnt[ch.charCodeAt() - 'a'.charCodeAt()]++;
+		}
+		for (const ch of t) {
+			cnt[ch.charCodeAt() - 'a'.charCodeAt()]--;
+			if (cnt[ch.charCodeAt() - 'a'.charCodeAt()] < 0) {
+				return ch;
+			}
+		}
+		return ' ';
+	};
+	var s = "anagram";
+	var t = "anagrm";
+	console.log(findTheDifference(s,t))
+
+/*
+	 var findTheDifference = function(s, t) {
+		let as = 0, at = 0;
+		for (let i = 0; i < s.length; i++) {
+			as += s[i].charCodeAt();
+		}
+		for (let i = 0; i < t.length; i++) {
+			at += t[i].charCodeAt();
+		}
+		return String.fromCharCode(at - as);
+	};
+	var s = "rnagram";
+	var t = "nagram";
+	console.log(findTheDifference(s,t))
+	
+*/
+
 	
 	</script>
 </head>
-<body>; 
+<body>
 	 
 </body>
 <html>
